@@ -1,0 +1,91 @@
+* ORGA Microservices: Architecture and Demonstration Guide
+
+The ORGA framework provides two production-ready, Dockerized microservices designed for robust, high-throughput organization profiling.
+
+** 1. Service Architecture
+
+*** Extractor Service (Port 8000)
+- **Role:** Synchronous, real-time profiling of a single organization URL.
+- **Use Case:** Interactive UIs, debugging, or on-demand data enrichment.
+- **Endpoint:** `POST /extract`
+- **Input:** `{"url": "https://example.com"}`
+- **Output:** A complete `OrganizationProfile` JSON object.
+
+*** Job Manager Service (Port 8001)
+- **Role:** Asynchronous, batch processing engine.
+- **Use Case:** Large-scale ingestion (e.g., parsing 10,000 URLs).
+- **Architecture:** Accepts an array of URLs, dispatches them to internal concurrent workers (respecting `aiolimiter` and global semaphores to avoid network saturation), and stores results against a UUID.
+- **Endpoints:**
+  - `POST /jobs` (Submit batch)
+  - `GET /jobs/{job_id}` (Poll status and retrieve results)
+
+** 2. Starting the Services
+
+Ensure Docker and Docker Compose are installed.
+
+#+BEGIN_SRC bash
+git clone https://github.com/your-org/orga.git
+cd orga
+
+# Build and start services in the background
+docker compose up --build -d
+
+# Verify health
+curl http://localhost:8000/health
+curl http://localhost:8001/health
+#+END_SRC
+
+** 3. Demonstration Commands
+
+*** A. Real-time Extraction (Extractor Service)
+
+Extract the profile for the World Health Organization:
+
+#+BEGIN_SRC bash
+curl -X POST "http://127.0.0.1:8000/extract" \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://www.who.int"}' | jq .
+#+END_SRC
+
+*Expected Output:* You should see a detailed JSON response identifying the `org_type` as `InternationalOrg`, alongside extracted global offices, phone numbers, and social links. The `debug_info` block will explain exactly which keywords triggered the classification.
+
+*** B. Batch Processing (Job Manager Service)
+
+Submit a batch of URLs for processing:
+
+#+BEGIN_SRC bash
+curl -s -X POST "http://127.0.0.1:8001/jobs" \
+     -H "Content-Type: application/json" \
+     -d '{
+           "urls": [
+             "https://www.cheo.on.ca",
+             "https://www.harvard.edu",
+             "https://www.doctorswithoutborders.org"
+           ]
+         }' | jq .
+#+END_SRC
+
+*Output:*
+#+BEGIN_SRC json
+{
+  "job_id": "123e4567-e89b-12d3-a456-426614174000",
+  "status": "pending"
+}
+#+END_SRC
+
+Poll for the results using the returned `job_id`:
+
+#+BEGIN_SRC bash
+curl -s "http://127.0.0.1:8001/jobs/123e4567-e89b-12d3-a456-426614174000" | jq .
+#+END_SRC
+
+*Output:* Once completed, the response will contain `results` (an array of `OrganizationProfile` objects) and `errors` (an array of URLs that failed due to network timeouts or terminal blocks).
+
+** 4. Known Error Codes & Handling
+
+The ORGA pipeline is heavily fortified with `try-except` blocks. Standard HTTP 500 errors should essentially never occur during extraction. Instead, failures are returned gracefully within the `OrganizationProfile` schema under the `warnings` array.
+
+Common Warning Codes:
+- `PAGE_BLOCKED`: The target URL employs Cloudflare, DataDome, or other aggressive anti-bot measures. The extraction is aborted early.
+- `CLASSIFICATION_LOW_CONFIDENCE`: The rule engine and Bayesian fallback could not establish a primary identity above the required threshold. `categories` will be empty.
+- `ADDRESS_PARTIALLY_PARSED`: An address was found, but internal NLP heuristics failed to cleanly separate Street from City/Region. The raw string is returned.

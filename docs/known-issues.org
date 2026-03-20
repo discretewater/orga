@@ -1,0 +1,28 @@
+* Known Issues and Acceptable Variances (M7.1)
+
+This document catalogs the current behavioral quirks of the ORGA framework. Crucially, it delineates which issues are considered "acceptable variances" inherent to the current architectural boundaries and which require systematic remediation in future architectures.
+
+** 1. Acceptable Variances (DO NOT PATCH)
+
+The following behaviors are acknowledged limitations of the current deterministic/heuristic model. They **must not** be masked with site-specific rules or excessive negative keywords.
+
+- **Secondary 'Government' Tags on Public Institutions:**
+  Publicly funded hospitals or universities (e.g., Ottawa Hospital) frequently include substantial government compliance, privacy, and affiliation text in their footers. A secondary "Government" tag is technically accurate at a corpus level, even if misaligned with the primary institutional identity.
+- **Secondary 'NonProfit' Tags on Children's Hospitals / Universities:**
+  These organizations often run aggressive, highly visible donation campaigns or operate integrated foundations (e.g., CHEO Foundation). The "NonProfit" designation is an acceptable semantic overlap.
+- **Secondary 'Association' Tags on International Orgs:**
+  Organizations like the IMF or World Bank contain heavy membership, society, and council vocabulary. The current tier-1/tier-2 thresholds cannot reliably distinguish "global alliance" from "professional association" via pure frequency.
+
+*Remediation Principle:* These represent the boundaries of semantic disambiguation via rules. Fixing them requires a higher-level model (e.g., an LLM or an XGBoost classifier applied to the intermediate debug scores), not more brittle regex.
+
+** 2. Issues Targeted for Future Systemic Fixes
+
+- **'ADDRESS_PARTIALLY_PARSED' Persistence:**
+  Raw address strings frequently encompass extraneous text such as "Visit our main campus at..." or phone numbers that slipped past the heuristic gatekeeper. While the M6.1 post-processor eliminates obvious noise (e.g., "Visit website"), deep structural splitting without NLP remains a fragile endeavor.
+- **Over-aggregation in Single-Page Applications (SPAs):**
+  Sites heavily reliant on JavaScript rendering or infinitely scrolling single-page architectures (where `/about` and `/contact` are merely anchor links `#contact`) may result in diluted page-weight scores because the `Discoverer` cannot fetch distinct physical sub-pages.
+
+** 3. Out of Scope (Will Not Fix)
+
+- Completely disambiguating nuanced corporate hierarchies (e.g., distinguishing a parent holding company from its operating subsidiary if both share the identical footer template).
+- Parsing unstructured, conversational contact texts ("Call Bob at the front desk on Tuesday").

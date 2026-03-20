@@ -1,0 +1,46 @@
+* ORGA Project: Engineering Boundaries and Technical Limits
+
+This document formalizes the technical boundaries, architectural constraints, and known ceilings of the ORGA organization profiling engine (M7.1 Frozen Baseline). 
+
+** 1. Core Technical Stack & Rationale
+
+The current ORGA extraction and classification pipeline deliberately avoids Large Language Models (LLMs) and heavy deep learning inferences. The architecture relies entirely on:
+- **Deterministic Rule Matching** (CSS selectors, JSON-LD extraction, Regex).
+- **Statistical Frequency Models** (Tier 2 Bayesian token counting).
+- **Heuristic Aggregation** (Weighted DOM zones and multi-page URL voting).
+- **Post-Processing Sanitization** (Conservative noise filtering).
+
+*Why avoid LLMs?*
+- **Interpretability:** Every extraction decision and category score can be directly traced back to a specific rule, keyword, or page zone in the ~debug_info~.
+- **Cost & Speed:** The system processes multiple pages per organization in sub-second latencies (~0.6s avg per URL) with minimal CPU/Memory overhead.
+- **Engineering Control:** It ensures predictable failures rather than hallucinatory drift.
+
+** 2. Capabilities & Ceilings
+
+*** What the Current Architecture Excels At:
+- Rapidly identifying "primary identity" classes (e.g., Hospital, University, International Organization).
+- Aggregating structured contact details (phones, emails, social links) across disparate pages.
+- Providing a stable, low-latency, and highly deterministic microservice backbone.
+
+*** What the Current Architecture Cannot Do (The Ceiling):
+- **Complex Semantic Disambiguation:** It cannot easily distinguish between nuanced roles (e.g., distinguishing a "Research Hospital" from an "Academic Association" when both vocabularies are heavily mixed).
+- **Boundary Precision in Noisy Layouts:** Highly integrated portals (e.g., a hospital operating a university campus with heavy government funding) will inevitably bleed secondary categories.
+- **Flawless Address Structuring:** Extracting perfect Street/City/Region splits from unstructured, conversational footers without NLP remains challenging and will occasionally result in ~partially_parsed~ raw strings.
+
+** 3. Known Residual Issues (Stratified)
+
+1. *Acceptable Variances:* Secondary tags (e.g., a Hospital tagged additionally as Government, or a University as NonProfit) are treated as acceptable reflections of the page's funding/governance corpus, not as strict errors.
+2. *Address Parsing Artifacts:* Raw strings containing navigational noise ("Visit us at...", "Directions") may occasionally bypass filters if they closely mimic valid address formats.
+3. *Page Noise Interference:* Footers containing massive partner lists can artificially inflate secondary category scores. 
+
+** 4. Prohibited Actions (The "Do Not Do" List)
+
+To maintain architectural integrity, the following practices are strictly prohibited post-M7.1:
+- **DO NOT engage in sample-driven programming.** (e.g., Do not add a specific rule just because "Ottawa Hospital failed").
+- **DO NOT create site-specific patches or hardcoded URL blacklists.**
+- **DO NOT bloat the taxonomy without bounds.** Expanding keywords without rigorous negative-weight tuning leads to classification collapse.
+
+** 5. Future Enhancement Roadmap (Beyond M8)
+
+If higher precision is strictly required, the recommended path is **NOT** to replace this engine, but to introduce a *Lightweight Supervised Post-Calibration Model*.
+- *Why:* The current system generates high-quality deterministic features (the `debug_info` scores). A lightweight XGBoost or small transformer model could take these numerical scores as inputs to perform final class disambiguation, preserving the speed and explainability of the extraction layer while refining the final decision boundary.

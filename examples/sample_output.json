@@ -1,0 +1,3525 @@
+{
+  "name": "CHEO",
+  "aliases": [],
+  "org_type": "Hospital",
+  "description": null,
+  "locations": [
+    {
+      "label": null,
+      "address": {
+        "raw": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L1",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "heuristic_text",
+          "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "heuristic_text",
+          "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Address:, 2225 Mer-Bleue Road,, Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K4A 5M3",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Address:, 2225 Mer-Bleue Rd,, Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "2225 Mer-Bleue Rd,, Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street, Suite 111",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K4A 5M3",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street, Suite 111",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Centre for Healthy Active Living, 1355 Bank Street, Suite 111, Ottawa ON K1H 8K7, Children's Treatment Centre",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8K7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Centre for Healthy Active Living, 1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Suite 111, Ottawa ON K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8K7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road, Ottawa ON K1H 8L2",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L2",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "395 Smyth Road, 395 Smyth Road, Ottawa ON K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court",
+        "street": "395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court",
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L2",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON K2L 4H7, Renfrew Victoria Hospital",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L2",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K2L 4H7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K2L 4H7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "H7V 1P6",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON K1G 6C9, The Children's Rehabilitation Centre",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "H7V 1P6",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street",
+        "street": "2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Childr",
+        "unit": null,
+        "city": "en's Rehabilitation Centre",
+        "region": "600 Campbell Street",
+        "postal_code": "K1G 6C9",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON K6H 6C9",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 6C9",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON K6H 6C9, Outpatient mental health",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K6H 6C9",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Suite 100, Cornwall ON K6H 6C9, Outpatient mental health, Montreal Road, 1661 Montreal Road",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K6H 6C9",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road, 1661 Montreal Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road, 1661 Montreal Road, Ottawa, Ontario K1J 9B7",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Outpatient mental health, Montreal Road, 1661 Montreal Road, Ottawa, Ontario K1J 9B7",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1J 9B7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Outpatient mental health, Montreal Road, 1661 Montreal Road, Ottawa, Ontario K1J 9B7",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Eating Disorders Day Treatment and Outpatient, 695 Industrial Avenue., Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 0Z1",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Eating Disorders Day Treatment and Outpatient, 695 Industrial Ave., Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "695 Industrial Ave., Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet, 2305 Street. Laurent Boulevard., Unit 300B, Ottawa, ON. K1G 4J8",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 0Z1",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "(613) 737-7600 ext. 5890, YouthNet, 2305 Street. Laurent Boulevard., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 4J8",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "(613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "YouthNet, 2305 Street. Laurent Boulevard., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services)",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 4J8",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services)",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 4J8",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "(613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON K2K 1L1",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K2K 1L1",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "(613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K2K 1L1, Industrial Avenue, 831 Industrial Avenue, Ottawa ON K1G 4L3, Cornwall",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K2K 1L1",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Industrial Avenue, 831 Industrial Avenue, Ottawa ON K1G 4L3, Cornwall, 600 Campbell Street",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 4L3",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K1G 4L3, Cornwall, 600 Campbell Street, Cornwall ON K6H 6C9, Renfrew",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1G 4L3",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Cornwall ON K6H 6C9, Renfrew, 191 Plaunt Street, Renfrew ON K7V 1M7, Roger Neilson Children\u2019s Hospice",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K6H 6C9",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.4,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Renfrew, 191 Plaunt Street, Renfrew ON K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K7V 1M7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.4
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Renfrew ON K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON K1H 8L2, Rotel",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K7V 1M7",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON K1H 8L2, Rotel, 411 Smyth Road",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L2",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Ottawa ON K1H 8L2, Rotel, 411 Smyth Road, Ottawa ON K1H 8M8, CHEO",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8L2",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    },
+    {
+      "label": null,
+      "address": {
+        "raw": "Rotel, 411 Smyth Road, Ottawa ON K1H 8M8, CHEO, Coming to CHEO",
+        "street": null,
+        "unit": null,
+        "city": null,
+        "region": null,
+        "postal_code": "K1H 8M8",
+        "country": null
+      },
+      "phones": [],
+      "emails": [],
+      "map_links": [],
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO, Coming to CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "heuristic_text",
+          "snippet": "411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO, Coming to CHEO, Clinics, Services & Programs",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": [],
+      "warnings": []
+    }
+  ],
+  "phones": [
+    {
+      "kind": "phone",
+      "value": "+16137377600",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_tel",
+          "snippet": "tel:16137377600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_tel",
+          "snippet": "tel:16137377600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_tel",
+          "snippet": "tel:16137377600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_tel",
+          "snippet": "tel:16137377600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137377600,2155",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_tel",
+          "snippet": "tel:16137377600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137414390",
+      "label": null,
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "text_matcher_validated",
+          "snippet": "613-741-4390",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137386990",
+      "label": null,
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "text_matcher_validated",
+          "snippet": "613-738-6990",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137383915",
+      "label": null,
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "text_matcher_validated",
+          "snippet": "(613) 738-3915",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.6
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137462917",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137462917",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372757",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372757",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16136322327",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6136322327",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137370871",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137370871",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16139322327",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6139322327",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16136882126",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6136882126",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16134338239",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6134338239",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16138315098",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6138315098",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372222",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372222",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16132601477",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6132601477,221",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372299",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372299",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372275",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372275",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372470",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372470",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372780",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372780",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372242",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372242",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372227",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372227",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137372279",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137372279",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16135236300",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6135236300,4600",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "phone",
+      "value": "+16137331412",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_tel",
+          "snippet": "tel://6137331412",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    }
+  ],
+  "emails": [
+    {
+      "kind": "email",
+      "value": "accessibility@cheo.on.ca",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:accessibility@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "email",
+      "value": "talentacquisition@cheo.on.ca",
+      "label": null,
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_mailto",
+          "snippet": "mailto:TalentAcquisition@cheo.on.ca",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.9
+        }
+      ],
+      "internal_evidence": []
+    }
+  ],
+  "contact_form_url": null,
+  "social_links": [
+    {
+      "kind": "social",
+      "value": "https://facebook.com/cheokids",
+      "label": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.facebook.com/CHEOkids/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "social",
+      "value": "https://instagram.com/cheohospital",
+      "label": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "social",
+      "value": "https://youtube.com/@cheo",
+      "label": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.youtube.com/@CHEO",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "social",
+      "value": "https://linkedin.com/company/cheo-ottawa",
+      "label": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/index.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_social",
+          "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": []
+    },
+    {
+      "kind": "social",
+      "value": "http://linkedin.com/sharearticle",
+      "label": null,
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fvisiting-cheo%2fmap-and-locations.aspx",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+          "source_type": "html_attr_social",
+          "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx%3f_mid_%3d1798",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+          "source_type": "html_attr_social",
+          "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+          "source_type": "html_attr_social",
+          "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fmodules%2fcontact%2fsearch.aspx%3fs%3dofidmqfyp7dgbaqqb0h38gequalequal",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        },
+        {
+          "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+          "source_type": "html_attr_social",
+          "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fcareers.aspx%3f_mid_%3d1136",
+          "extractor_name": null,
+          "strategy_name": null,
+          "confidence_score": 0.8
+        }
+      ],
+      "internal_evidence": []
+    }
+  ],
+  "categories": [
+    "Hospital",
+    "NonProfit"
+  ],
+  "services": [],
+  "keywords": [],
+  "observed_at": null,
+  "evidence": [
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372757",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_social",
+      "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fcareers.aspx%3f_mid_%3d1136",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137331412",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road, 1661 Montreal Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Outpatient mental health, Montreal Road, 1661 Montreal Road, Ottawa, Ontario K1J 9B7",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_tel",
+      "snippet": "tel:16137377600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372470",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "text_matcher_validated",
+      "snippet": "613-741-4390",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372275",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137370871",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_tel",
+      "snippet": "tel:16137377600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:, 395 Smyth Road, 395 Smyth Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6135236300,4600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6132601477,221",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Cornwall ON\u00a0K6H 6C9, Outpatient mental health, Montreal Road, 1661 Montreal Road, Ottawa, Ontario K1J 9B7",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services)",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6136322327",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "text_matcher_validated",
+      "snippet": "(613) 738-3915",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2, Rotel",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_social",
+      "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fmodules%2fcontact%2fsearch.aspx%3fs%3dofidmqfyp7dgbaqqb0h38gequalequal",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372299",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372227",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_tel",
+      "snippet": "tel:16137377600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street, Suite 111",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137377600,2155",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Eating Disorders Day Treatment and Outpatient, 695 Industrial Ave., Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_tel",
+      "snippet": "tel:16137377600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9, Outpatient mental health",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Centre for Healthy Active Living, 1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6134338239",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Cornwall ON\u00a0K6H 6C9, Renfrew, 191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "text_matcher_validated",
+      "snippet": "613-738-6990",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137462917",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "1355 Bank Street, Suite 111, Ottawa ON\u00a0K1H 8K7, Children's Treatment Centre, In addition to 401 Smyth Road, there are also branches of our Children's Treatment Centre at the following addresses:",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.instagram.com/cheohospital/?hl=en",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6136882126",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6138315098",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "(613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Beaverbrook Road, 109-1002 Beaverbrook Road, Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K1H 8L2, Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "191 Plaunt Street, Renfrew ON\u00a0K7V 1M7, Roger Neilson Children\u2019s Hospice, 399 Smyth Road, Ottawa ON\u00a0K1H 8L2",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372242",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.facebook.com/CHEOkids/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Rotel, 411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO, Coming to CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/index.aspx",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:TalentAcquisition@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7, Renfrew Victoria Hospital, 499 Raglan Street North",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall, 600 Campbell Street, Cornwall ON\u00a0K6H 6C9",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Address:, 2225 Mer-Bleue Rd,, Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road, 109-1002 Beaverbrook Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street, Suite 100, Cornwall ON\u00a0K6H 6C9",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "695 Industrial Ave., Ottawa, ON K1G 0Z1, (613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372780",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "html_attr_social",
+      "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fvisiting-cheo%2fmap-and-locations.aspx",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9, The Children's Rehabilitation Centre, 600 Campbell Street",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Ottawa ON\u00a0K2K 1L1, Industrial Avenue, 831 Industrial Avenue, Ottawa ON\u00a0K1G 4L3, Cornwall",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6139322327",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_social",
+      "snippet": "http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx%3f_mid_%3d1798",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.linkedin.com/company/cheo-ottawa/",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+      "source_type": "html_attr_social",
+      "snippet": "https://www.youtube.com/@CHEO",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court, Ottawa ON\u00a0K2L 4H7",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "411 Smyth Road, Ottawa ON\u00a0K1H 8M8, CHEO, Coming to CHEO, Clinics, Services & Programs",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372279",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "About Us, Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "html_attr_tel",
+      "snippet": "tel:16137377600",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "2225 Mer-Bleue Rd,, Orl\u00e9ans (Ontario), K4A 5M3, Centre for Healthy Active Living, 1355 Bank Street",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "395 Smyth Road, 395 Smyth Road, Ottawa ON\u00a0K1H 8L2, Western Ottawa Community Resource Centre, 2 MacNeil Court",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "499 Raglan Street North, Renfrew ON H7V 1P6, 2211 Thurston Drive, 2211 Thurston Drive, Ottawa ON\u00a0K1G 6C9",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_mailto",
+      "snippet": "mailto:accessibility@cheo.on.ca",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "(613) 737-7600 ext. 5890, YouthNet, 2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "heuristic_text",
+      "snippet": "Contact Us, CHEO, 401 Smyth Road, Ottawa ON K1H 8L1",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+      "source_type": "heuristic_text",
+      "snippet": "2305 St. Laurent Blvd., Unit 300B, Ottawa, ON. K1G 4J8, (613) 738-3915, Neurodevelopmental Health Services (including Autism Services, Extensive Needs Services and Behaviour Services), Beaverbrook Road",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    },
+    {
+      "source_url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+      "source_type": "html_attr_tel",
+      "snippet": "tel://6137372222",
+      "extractor_name": null,
+      "strategy_name": null,
+      "confidence_score": 0.0
+    }
+  ],
+  "internal_evidence": [],
+  "confidence": {
+    "overall_score": 0.89,
+    "field_scores": {}
+  },
+  "warnings": [
+    {
+      "code": "ADDRESS_PARTIALLY_PARSED",
+      "message": "Address found but only raw string was extracted",
+      "severity": "warning",
+      "related_field": "locations",
+      "source_url": null
+    }
+  ],
+  "debug_info": {
+    "classification_debug": [
+      {
+        "url": "https://www.cheo.on.ca/en/index.aspx",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 12.5,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 4.0,
+                "source": "rule_based"
+              },
+              "NonProfit": {
+                "score": 8.5,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 2.0,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                12.5
+              ],
+              [
+                "NonProfit",
+                8.5
+              ],
+              [
+                "University",
+                4.0
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 12.5,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 4.0,
+              "source": "rule_based"
+            },
+            "NonProfit": {
+              "score": 8.5,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 2.0,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      },
+      {
+        "url": "https://www.cheo.on.ca/en/visiting-cheo/map-and-locations.aspx",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 12.5,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 4.0,
+                "source": "rule_based"
+              },
+              "NonProfit": {
+                "score": 8.5,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 2.0,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                12.5
+              ],
+              [
+                "NonProfit",
+                8.5
+              ],
+              [
+                "University",
+                4.0
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 12.5,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 4.0,
+              "source": "rule_based"
+            },
+            "NonProfit": {
+              "score": 8.5,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 2.0,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      },
+      {
+        "url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx?_mid_=1798",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 19.0,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 0.0,
+                "reason": "negative_keyword"
+              },
+              "NonProfit": {
+                "score": 11.5,
+                "source": "rule_based"
+              },
+              "Government": {
+                "score": 15.0,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 3.5,
+                "source": "rule_based"
+              },
+              "Association": {
+                "score": 4.5,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                19.0
+              ],
+              [
+                "Government",
+                15.0
+              ],
+              [
+                "NonProfit",
+                11.5
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 19.0,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 0.0,
+              "reason": "negative_keyword"
+            },
+            "NonProfit": {
+              "score": 11.5,
+              "source": "rule_based"
+            },
+            "Government": {
+              "score": 15.0,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 3.5,
+              "source": "rule_based"
+            },
+            "Association": {
+              "score": 4.5,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      },
+      {
+        "url": "https://www.cheo.on.ca/en/about-us/about-cheo.aspx",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 19.0,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 0.0,
+                "reason": "negative_keyword"
+              },
+              "NonProfit": {
+                "score": 11.5,
+                "source": "rule_based"
+              },
+              "Government": {
+                "score": 15.0,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 3.5,
+                "source": "rule_based"
+              },
+              "Association": {
+                "score": 4.5,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                19.0
+              ],
+              [
+                "Government",
+                15.0
+              ],
+              [
+                "NonProfit",
+                11.5
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 19.0,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 0.0,
+              "reason": "negative_keyword"
+            },
+            "NonProfit": {
+              "score": 11.5,
+              "source": "rule_based"
+            },
+            "Government": {
+              "score": 15.0,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 3.5,
+              "source": "rule_based"
+            },
+            "Association": {
+              "score": 4.5,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      },
+      {
+        "url": "https://www.cheo.on.ca/Modules/contact/search.aspx?s=oFIdMqfyp7dgBaqqB0H38geQuAleQuAl",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 12.5,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 1.5,
+                "source": "rule_based"
+              },
+              "NonProfit": {
+                "score": 8.5,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 2.0,
+                "source": "rule_based"
+              },
+              "Association": {
+                "score": 3.0,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                12.5
+              ],
+              [
+                "NonProfit",
+                8.5
+              ],
+              [
+                "Association",
+                3.0
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 12.5,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 1.5,
+              "source": "rule_based"
+            },
+            "NonProfit": {
+              "score": 8.5,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 2.0,
+              "source": "rule_based"
+            },
+            "Association": {
+              "score": 3.0,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      },
+      {
+        "url": "https://www.cheo.on.ca/en/about-us/careers.aspx?_mid_=1136",
+        "info": {
+          "tier1_debug": {
+            "candidates": {
+              "Hospital": {
+                "score": 19.0,
+                "source": "rule_based"
+              },
+              "University": {
+                "score": 1.5,
+                "source": "rule_based"
+              },
+              "NonProfit": {
+                "score": 9.5,
+                "source": "rule_based"
+              },
+              "InternationalOrg": {
+                "score": 3.5,
+                "source": "rule_based"
+              },
+              "Association": {
+                "score": 1.5,
+                "source": "rule_based"
+              }
+            },
+            "threshold": 2.0,
+            "top_scores": [
+              [
+                "Hospital",
+                19.0
+              ],
+              [
+                "NonProfit",
+                9.5
+              ],
+              [
+                "InternationalOrg",
+                3.5
+              ]
+            ]
+          },
+          "tier2_debug": {},
+          "decision_path": [
+            "Tier 1 (Rules) match found."
+          ],
+          "final_candidates": {
+            "Hospital": {
+              "score": 19.0,
+              "source": "rule_based"
+            },
+            "University": {
+              "score": 1.5,
+              "source": "rule_based"
+            },
+            "NonProfit": {
+              "score": 9.5,
+              "source": "rule_based"
+            },
+            "InternationalOrg": {
+              "score": 3.5,
+              "source": "rule_based"
+            },
+            "Association": {
+              "score": 1.5,
+              "source": "rule_based"
+            }
+          },
+          "threshold_config": {
+            "tier1_threshold": 2.0,
+            "tier2_min_score": 0.5,
+            "margin": 0.1,
+            "top_k": 1
+          }
+        }
+      }
+    ],
+    "filtered_social_links": [
+      {
+        "value": "http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cheo.on.ca%2fen%2fvisiting-cheo%2fmap-and-locations.aspx",
+        "normalized": "http://facebook.com/sharer.php",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://twitter.com/home?status=Check+out+http%3a%2f%2fwww.cheo.on.ca%2fen%2fvisiting-cheo%2fmap-and-locations.aspx",
+        "normalized": "http://twitter.com/home",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx%3f_mid_%3d1798",
+        "normalized": "http://facebook.com/sharer.php",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://twitter.com/home?status=Check+out+http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx%3f_mid_%3d1798",
+        "normalized": "http://twitter.com/home",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx",
+        "normalized": "http://facebook.com/sharer.php",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://twitter.com/home?status=Check+out+http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fabout-cheo.aspx",
+        "normalized": "http://twitter.com/home",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cheo.on.ca%2fmodules%2fcontact%2fsearch.aspx%3fs%3dofidmqfyp7dgbaqqb0h38gequalequal",
+        "normalized": "http://facebook.com/sharer.php",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://twitter.com/home?status=Check+out+http%3a%2f%2fwww.cheo.on.ca%2fmodules%2fcontact%2fsearch.aspx%3fs%3dofidmqfyp7dgbaqqb0h38gequalequal",
+        "normalized": "http://twitter.com/home",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fcareers.aspx%3f_mid_%3d1136",
+        "normalized": "http://facebook.com/sharer.php",
+        "reason": "validation_failed"
+      },
+      {
+        "value": "http://twitter.com/home?status=Check+out+http%3a%2f%2fwww.cheo.on.ca%2fen%2fabout-us%2fcareers.aspx%3f_mid_%3d1136",
+        "normalized": "http://twitter.com/home",
+        "reason": "validation_failed"
+      }
+    ]
+  },
+  "schema_version": "0.1.0"
+}

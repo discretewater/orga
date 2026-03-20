@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orga"
+version = "0.1.0"
+description = "A modular, strategy-driven organization profile extractor."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Xiang Dao", email = "xiangdao@example.com" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+  "pydantic>=2.0",
+  "selectolax",
+  "extruct",
+  "phonenumbers",
+  "email-validator",
+  "rapidfuzz",
+  "PyYAML",
+  "httpx",
+  "tenacity",
+  "aiolimiter",
+  "hishel",
+  "structlog",
+  "opentelemetry-api",
+  "typer",
+]
+
+[project.optional-dependencies]
+browser = ["playwright"]
+llm = ["langextract"]
+server = ["fastapi", "uvicorn"]
+dev = [
+  "pytest",
+  "pytest-asyncio",
+  "pytest-cov",
+  "ruff",
+  "mypy",
+  "black",
+]
+
+[project.scripts]
+orga = "orga.cli.main:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["orga"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "PL", "RUF"]
+ignore = []
+
+[tool.mypy]
+strict = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+asyncio_mode = "auto"
