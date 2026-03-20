@@ -1,5 +1,7 @@
 # ORGA: Deterministic Organization Profiler
 
+[![PyPI version](https://badge.fury.io/py/orga.svg)](https://badge.fury.io/py/orga)
+
 **A fast, explainable, non-LLM extraction engine for profiling institutional websites.**
 
 ---
