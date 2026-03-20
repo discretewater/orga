@@ -1,0 +1,28 @@
+{
+  "job_id": "123e4567-e89b-12d3-a456-426614174000",
+  "status": "completed",
+  "results": [
+    {
+      "name": "CHEO",
+      "org_type": "Hospital",
+      "categories": ["Hospital", "NonProfit"],
+      "locations": [{"address": {"raw": "401 Smyth Road, Ottawa ON K1H 8L1"}}],
+      "website": "https://www.cheo.on.ca"
+    },
+    {
+      "name": "Harvard University",
+      "org_type": "University",
+      "categories": ["University"],
+      "locations": [{"address": {"raw": "Cambridge, MA 02138"}}],
+      "website": "https://www.harvard.edu"
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "org_type": "InternationalOrg",
+      "categories": ["InternationalOrg"],
+      "locations": [{"address": {"raw": "Avenue Appia 20, 1211 Geneva 27, Switzerland"}}],
+      "website": "https://www.who.int"
+    }
+  ],
+  "errors": []
+}
