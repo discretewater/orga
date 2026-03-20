@@ -42,7 +42,7 @@ ORGA operates at the absolute ceiling of what rule-based extraction can achieve.
 Ensure you have Docker and Docker Compose installed.
 
 ```bash
-git clone https://github.com/your-org/orga.git
+git clone https://github.com/discretewater/orga.git
 cd orga
 
 # Start the Extractor (8000) and Job Manager (8001) services

@@ -111,11 +111,14 @@ def parse(
 def parse_batch(
     input_file: Path = typer.Argument(..., help="Text file containing URLs (one per line)"),
     config: Optional[Path] = typer.Option(None, "--config", "-c", help="Path to configuration file"),
-    output: Path = typer.Option(..., "--output", "-o", help="Path to save the output JSONL file"),
+    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Path to save the output JSONL file"),
+    pretty: bool = typer.Option(False, "--pretty", help="Pretty print JSON output (best for stdout debugging)"),
     debug: bool = typer.Option(False, "--debug", "-d", help="Enable debug output in JSONL")
 ):
     """
-    Batch parse multiple URLs and save results to a JSONL file.
+    Batch parse multiple URLs.
+    Default output is JSONL (one JSON per line).
+    Use --pretty for readable output on stdout.
     """
     orga_config = load_config(config)
     pipeline = OrgaPipeline(orga_config)
@@ -129,10 +132,13 @@ def parse_batch(
     async def _run_batch():
         results = []
         for i, url in enumerate(urls):
+            # Log progress to stderr so stdout remains clean for piping
             typer.echo(f"[{i+1}/{len(urls)}] Processing {url}...", err=True)
             try:
                 profile = await pipeline.run_from_url(url)
                 
+                # Determine exclusion set
+                exclude_set = {}
                 if not debug:
                     exclude_set = {
                         "internal_evidence": True,
@@ -142,9 +148,11 @@ def parse_batch(
                         "emails": {"__all__": {"internal_evidence": True}},
                         "social_links": {"__all__": {"internal_evidence": True}}
                     }
-                    results.append(profile.model_dump_json(exclude=exclude_set))
-                else:
-                    results.append(profile.model_dump_json())
+                
+                # Format output
+                indent = 2 if pretty and not output else None
+                json_str = profile.model_dump_json(indent=indent, exclude=exclude_set if not debug else None)
+                results.append(json_str)
                     
             except Exception as e:
                 typer.secho(f"Failed to process {url}: {str(e)}", fg=typer.colors.YELLOW, err=True)
@@ -152,11 +160,24 @@ def parse_batch(
 
     json_lines = asyncio.run(_run_batch())
     
-    with output.open("w", encoding="utf-8") as f:
+    if output:
+        # File output is always JSONL (no pretty print to ensure validity)
+        if pretty:
+             typer.secho("Warning: --pretty is ignored when writing to file to maintain valid JSONL format.", fg=typer.colors.YELLOW, err=True)
+        
+        with output.open("w", encoding="utf-8") as f:
+            for line in json_lines:
+                # If we computed pretty strings above, we must flatten them for JSONL file
+                if pretty:
+                    # Parse back and dump as single line
+                    import json
+                    line = json.dumps(json.loads(line))
+                f.write(line + "\n")
+        typer.secho(f"Successfully processed {len(json_lines)} URLs. Output: {output}", fg=typer.colors.GREEN, err=True)
+    else:
+        # Stdout output
         for line in json_lines:
-            f.write(line + "\n")
-            
-    typer.secho(f"Successfully processed {len(json_lines)} URLs. Output: {output}", fg=typer.colors.GREEN, err=True)
+            typer.echo(line)
 
 @app.command()
 def list_strategies():

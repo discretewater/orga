@@ -8,6 +8,12 @@ set -e
 EXTRACTOR_URL="http://127.0.0.1:8000"
 JOB_MANAGER_URL="http://127.0.0.1:8001"
 
+# Check for jq
+if ! command -v jq &> /dev/null; then
+    echo "Error: jq is not installed. Please install it (e.g., sudo apt install jq / brew install jq) to run this demo."
+    exit 1
+fi
+
 echo "=== 1. Checking Service Health ==="
 curl -s $EXTRACTOR_URL/health | jq .
 curl -s $JOB_MANAGER_URL/health | jq .

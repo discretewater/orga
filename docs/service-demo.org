@@ -24,7 +24,7 @@ The ORGA framework provides two production-ready, Dockerized microservices desig
 Ensure Docker and Docker Compose are installed.
 
 #+BEGIN_SRC bash
-git clone https://github.com/your-org/orga.git
+git clone https://github.com/discretewater/orga.git
 cd orga
 
 # Build and start services in the background
