@@ -10,6 +10,34 @@ ORGA is a Python-based profiling engine and microservice suite designed to auton
 
 **Crucially, ORGA is not an LLM.** It is built entirely on deterministic rules, semantic heuristics, JSON-LD parsing, and lightweight statistical Bayesian models.
 
+## ⚡ Output Snapshot
+
+*A minimal example of the structured JSON output generated for a hospital website:*
+
+```json
+{
+  "name": "CHEO",
+  "org_type": "Hospital",
+  "categories": ["Hospital", "NonProfit"],
+  "locations": [
+    {
+      "address": {
+        "raw": "401 Smyth Road, Ottawa ON K1H 8L1",
+        "postal_code": "K1H 8L1",
+        "city": "Ottawa"
+      },
+      "confidence": 0.9
+    }
+  ],
+  "phones": [
+    { "value": "+16137377600", "kind": "phone" }
+  ],
+  "social_links": [
+    { "value": "https://facebook.com/cheokids", "kind": "social" }
+  ]
+}
+```
+
 ## 🧠 Why No LLMs?
 
 In an era of generative AI, why build a deterministic extractor?
