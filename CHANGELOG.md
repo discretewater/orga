@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2026-03-20
+
+### Changed
+- Complete Open-Source polish for GitHub (README, Governance docs, examples).
+- Unified internal version tracking and schema definitions to match public release.
+- Updated author contact information.
+
 ## [0.1.1] - 2026-03-20
 
 ### Metadata

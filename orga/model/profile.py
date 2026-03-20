@@ -85,4 +85,4 @@ class OrganizationProfile(BaseModel):
     confidence: Optional[Confidence] = Field(None, description="Confidence information")
     warnings: List[Warning] = Field(default_factory=list, description="List of warnings")
     debug_info: Dict[str, Any] = Field(default_factory=dict, description="Diagnostic information (only populated in debug mode)")
-    schema_version: str = Field("0.1.0", description="Schema version")
+    schema_version: str = Field("0.1.2", description="Schema version")

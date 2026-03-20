@@ -38,7 +38,7 @@ class TestScoringEngine:
             name="Test Org",
             locations=[Location(address=Address(raw="123 Main St"), confidence=0.9)],
             phones=[], # Missing contact info
-            schema_version="0.1.0"
+            schema_version="0.1.2"
         )
         # Assume alpha_name = 0.4, alpha_location = 0.6, alpha_contact = 0.0 (if missing)
         # Completeness penalty: 0.8 if no contacts

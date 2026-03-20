@@ -25,7 +25,7 @@ class TestOrganizationProfile:
         """
         profile = OrganizationProfile(
             name="Test Org",
-            schema_version="0.1.0"
+            schema_version="0.1.2"
         )
         assert profile.name == "Test Org"
         assert profile.locations == []
@@ -63,7 +63,7 @@ class TestOrganizationProfile:
             categories=["Technology", "Software"],
             keywords=["AI", "Parsing"],
             observed_at="2026-03-06T12:00:00Z",
-            schema_version="0.1.0"
+            schema_version="0.1.2"
         )
         assert len(profile.aliases) == 2
         assert profile.locations[0].address.city == "Metropolis"

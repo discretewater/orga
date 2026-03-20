@@ -3527,7 +3527,7 @@
           }
         ]
       },
-      "schema_version": "0.1.0"
+      "schema_version": "0.1.2"
     },
     {
       "name": "Harvard University",
@@ -4470,7 +4470,7 @@
           }
         ]
       },
-      "schema_version": "0.1.0"
+      "schema_version": "0.1.2"
     },
     {
       "name": "World Health Organization (WHO)",
@@ -4876,7 +4876,7 @@
         },
         {
           "kind": "phone",
-          "value": "+81782303100",
+          "value": "+8178230.1.2",
           "label": null,
           "confidence": 0.6,
           "evidence": [
@@ -6310,7 +6310,7 @@
           }
         ]
       },
-      "schema_version": "0.1.0"
+      "schema_version": "0.1.2"
     }
   ],
   "errors": []

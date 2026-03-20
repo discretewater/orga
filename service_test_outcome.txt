@@ -1437,7 +1437,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #2: Home
@@ -2775,7 +2775,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #3: CHEO
@@ -6303,7 +6303,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #4: UN World Food Programme (WFP)
@@ -8550,7 +8550,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #5: Unknown
@@ -8582,7 +8582,7 @@ Job Completed in 16.31s
     }
   ],
   "debug_info": {},
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #6: Unknown
@@ -8614,7 +8614,7 @@ Job Completed in 16.31s
     }
   ],
   "debug_info": {},
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #7: Home | Doctors Without Borders - USA
@@ -8644,7 +8644,7 @@ Job Completed in 16.31s
         {
           "source_url": "https://www.doctorswithoutborders.org/contact-us",
           "source_type": "heuristic_text",
-          "snippet": "Get in touch with Doctors Without Borders/M\u00e9decins Sans Fronti\u00e8res (MSF)., CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0 10006",
+          "snippet": "Get in touch with Doctors Without Borders/M\u00e9decins Sans Fronti\u00e8res (MSF)., CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0.1.206",
           "extractor_name": null,
           "strategy_name": null,
           "confidence_score": 0.4
@@ -8652,7 +8652,7 @@ Job Completed in 16.31s
         {
           "source_url": "https://www.doctorswithoutborders.org/contact-us",
           "source_type": "heuristic_text",
-          "snippet": "CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0 10006",
+          "snippet": "CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0.1.206",
           "extractor_name": null,
           "strategy_name": null,
           "confidence_score": 0.4
@@ -9604,7 +9604,7 @@ Job Completed in 16.31s
     {
       "source_url": "https://www.doctorswithoutborders.org/contact-us",
       "source_type": "heuristic_text",
-      "snippet": "Get in touch with Doctors Without Borders/M\u00e9decins Sans Fronti\u00e8res (MSF)., CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0 10006",
+      "snippet": "Get in touch with Doctors Without Borders/M\u00e9decins Sans Fronti\u00e8res (MSF)., CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0.1.206",
       "extractor_name": null,
       "strategy_name": null,
       "confidence_score": 0.0
@@ -9804,7 +9804,7 @@ Job Completed in 16.31s
     {
       "source_url": "https://www.doctorswithoutborders.org/contact-us",
       "source_type": "heuristic_text",
-      "snippet": "CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0 10006",
+      "snippet": "CENTRAL AFRICAN REPUBLIC 2016  \u00a9 Pierre-Yves Bernard/MSF, USA Headquarters, 40 Rector St., 16th Floor, New York, NY\u00a0.1.206",
       "extractor_name": null,
       "strategy_name": null,
       "confidence_score": 0.0
@@ -10426,7 +10426,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #8: Harvard University
@@ -11372,7 +11372,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #9: Unknown
@@ -11436,7 +11436,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #10: University of Wisconsin–Madison
@@ -13105,7 +13105,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #11: MIT - Massachusetts Institute of Technology
@@ -14384,7 +14384,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #12: Home | University of Waterloo
@@ -17261,7 +17261,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #13: University of Ottawa | University of Ottawa
@@ -20059,7 +20059,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #14: Canada.ca
@@ -20389,7 +20389,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #15: Unknown
@@ -20453,7 +20453,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #16: Centers for Disease Control and Prevention | CDC
@@ -21631,7 +21631,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #17: World Health Organization (WHO)
@@ -22040,7 +22040,7 @@ Job Completed in 16.31s
     },
     {
       "kind": "phone",
-      "value": "+81782303100",
+      "value": "+8178230.1.2",
       "label": null,
       "confidence": 0.6,
       "evidence": [
@@ -23474,7 +23474,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #18: CIBSE - Chartered Institution of Building Services Engineers
@@ -24773,7 +24773,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #19: Home | The Ark 501c3 Nonprofit
@@ -26101,7 +26101,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #20: Home | Sierra Club
@@ -27482,7 +27482,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #21: World Bank Group - International Development, Poverty and Sustainability
@@ -28346,7 +28346,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #22: International Monetary Fund | IMF
@@ -31715,7 +31715,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #23: UNHCR - the UN Refugee Agency
@@ -31817,7 +31817,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #24: Greenpeace
@@ -32092,7 +32092,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #25: Heart and Stroke Foundation of Canada | Home
@@ -33880,7 +33880,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 #26: The world's best hospital - Mayo Clinic
@@ -37704,7 +37704,7 @@ Job Completed in 16.31s
       }
     ]
   },
-  "schema_version": "0.1.0"
+  "schema_version": "0.1.2"
 }
 [2026-03-20 17:14:53] 
 Detailed profile dumps saved to file.

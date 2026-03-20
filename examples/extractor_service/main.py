@@ -16,7 +16,7 @@ pipeline = OrgaPipeline(OrgaConfig())
 
 @app.on_event("startup")
 async def startup_event():
-    print("INFO:  ORGA SERVICE v6.1.2 (CLASSIFIER FIXED) - READY")
+    print("INFO:  ORGA SERVICE v0.1.2 - READY")
 
 @app.post("/extract", response_model=OrganizationProfile)
 async def extract_profile(request: ExtractRequest):

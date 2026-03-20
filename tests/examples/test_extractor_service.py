@@ -33,7 +33,7 @@ class TestExtractorService:
         assert response.status_code == 200
         data = response.json()
         assert data["name"] == "Test Org"
-        assert data["schema_version"] == "0.1.0"
+        assert data["schema_version"] == "0.1.2"
         
         # Verify it was called
         # Pydantic HttpUrl normalizes domains with trailing slash
