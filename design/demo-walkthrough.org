@@ -1,0 +1,75 @@
+* ORGA Demo Walkthrough
+
+This guide provides a step-by-step walkthrough for demonstrating ORGA to stakeholders or running it as a proof of concept.
+
+** 1. Setup (5 Minutes)
+
+**Prerequisites:** Docker and Docker Compose.
+
+1. **Clone and Enter:**
+   #+BEGIN_SRC bash
+   git clone https://github.com/discretewater/orga.git
+   cd orga
+   #+END_SRC
+
+2. **Launch Services:**
+   #+BEGIN_SRC bash
+   docker compose up --build -d
+   #+END_SRC
+
+3. **Verify Health:**
+   #+BEGIN_SRC bash
+   curl localhost:8000/health
+   # Returns: {"status":"ok"}
+   #+END_SRC
+
+** 2. Scenario A: The "Real-Time" Lookup
+
+*Goal:* Show how fast ORGA profiles a single site.
+
+**Action:**
+Run this command to profile the WHO:
+#+BEGIN_SRC bash
+curl -X POST "http://127.0.0.1:8000/extract" \
+     -H "Content-Type: application/json" \
+     -d '{"url": "https://www.who.int"}' | jq .
+#+END_SRC
+
+**Talking Points:**
+- Point out the `org_type`: "InternationalOrg".
+- Show the `social_links`: Clean, validated URLs.
+- Highlight speed: "This took < 1 second."
+
+** 3. Scenario B: The "Batch Ingestion"
+
+*Goal:* Demonstrate robustness and async processing.
+
+**Action:**
+1. Submit a job with a mix of site types:
+   #+BEGIN_SRC bash
+   curl -X POST "http://127.0.0.1:8001/jobs" \
+     -H "Content-Type: application/json" \
+     -d '{ "urls": [
+           "https://www.harvard.edu",
+           "https://www.cheo.on.ca",
+           "https://www.greenpeace.org"
+         ]}'
+   #+END_SRC
+   *Copy the `job_id` returned.*
+
+2. Poll for results:
+   #+BEGIN_SRC bash
+   curl "http://127.0.0.1:8001/jobs/<YOUR_JOB_ID>" | jq .
+   #+END_SRC
+
+**Talking Points:**
+- ORGA handles concurrency automatically.
+- It respects rate limits per host.
+- It survives blocked pages without crashing the batch.
+
+** 4. Interpreting the "Black Box" (Debug Info)
+
+In the JSON output, scroll down to `debug_info`.
+- Show `classification_debug`.
+- Explain how ORGA weighed the `/about` page higher than the `/news` page to determine the category.
+- This proves the system is **deterministic**, not a "black box" AI.

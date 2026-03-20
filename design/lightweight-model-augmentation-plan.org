@@ -1,0 +1,34 @@
+* Lightweight Model Augmentation Plan (Future)
+
+**Disclaimer:** This is a forward-looking design document. No implementation is currently planned for M8.
+
+** 1. Problem Statement
+
+The current rule-based system hits a ceiling when:
+1.  Keywords are ambiguous (e.g., "Care" used by a Pet Shop vs. a Hospital).
+2.  Address boundaries are fuzzy.
+
+** 2. The Solution: Post-Hoc Calibration
+
+Instead of replacing the extractor with a heavy LLM, we propose a **Lightweight Re-ranker**.
+
+*** Input Features
+The model would take the *debug info* from the current pipeline as input features:
+- `tier1_score_Hospital`: 45.0
+- `tier1_score_University`: 12.0
+- `page_count`: 5
+- `has_json_ld`: 1
+- `keyword_density_medical`: 0.05
+
+*** The Model
+- **Algorithm:** XGBoost or LightGBM.
+- **Size:** < 1MB.
+- **Latency:** < 10ms.
+
+*** Output
+- A calibrated probability for each category.
+- A "Quality Score" for each address (to filter out bad cuts).
+
+** 3. Integration Point
+
+The model would sit in the `ClassificationAggregator` class, replacing the static `SUPPRESSION_RULES` matrix with a dynamic probability threshold.

@@ -1,0 +1,30 @@
+* Address Quality Analysis and Limited Polish Strategy
+
+** 1. Current State Assessment
+
+The ORGA address parser (M7.1) is resilient but imprecise. It successfully identifies blocks of text containing address-like signals (Postal Codes, Street suffixes) but struggles to delineate the exact boundaries of that block within noisy HTML footers.
+
+*** Common Issues:
+- **Bleeding:** The address string often includes preceding navigation headers ("Contact Us", "Locations") or succeeding contact info ("Phone: 555-0199").
+- **Fragmentation:** Multi-line addresses in `<div>` soup are sometimes split into separate entities.
+- **False Positives:** ISO numbers or copyright dates resembling postal codes.
+
+** 2. The "Limited Polish" Strategy
+
+Per M8.1 directives, we are NOT rewriting the parser. We are applying **generic termination signals**.
+
+*** Improved Termination List:
+We define a set of "Hard Stops". If the parser encounters these tokens, it assumes the address block has ended.
+
+- *Contact Labels:* "Tel:", "Phone:", "Fax:", "Email:", "Call:"
+- *Social Media:* "Follow us", "Twitter", "Facebook", "Connect"
+- *Legal:* "Copyright", "Rights Reserved", "Privacy Policy"
+- *Navigation:* "Menu", "Home", "About", "Services"
+
+** 3. Remaining (Acceptable) Artifacts
+
+Even with these stops, some noise is inevitable.
+- *Inline Descriptions:* "Main Entrance at 123 Main St." -> "Main Entrance at" is hard to separate without NLP.
+- *PO Box Variations:* Highly variable formats for P.O. Boxes may be partially captured.
+
+These are considered **Acceptable Variances** for a heuristic system.

@@ -1,0 +1,43 @@
+* ORGA Guidelines: Problem Families and Rule Freeze
+
+This document establishes the strict governance rules for modifying the ORGA codebase post-M7.1. It defines the "Freeze State" and outlines the criteria for permissible changes.
+
+** 1. Core Principle: "Fix the Family, Not the Sample"
+
+The fundamental law of ORGA development is: **We do not patch specific websites.**
+
+- **Forbidden:** "The Ottawa Hospital parser failed because they put a phone number in the footer div. I will add a rule to ignore divs with class 'footer-phone'."
+- **Permitted:** "Several sites leak phone numbers into address blocks. I will add a generic regex pattern for phone numbers to the global `TERMINATION_SIGNALS` list in `AddressParser`."
+
+** 2. Defining a "Problem Family"
+
+A "Problem Family" is a structural or semantic pattern that appears across multiple, unrelated organizations.
+
+| Feature | Single Sample Issue (Ignored) | Problem Family (Fixable) |
+| :--- | :--- | :--- |
+| **Scope** | Unique to `example.org`'s bad HTML. | Found in `example.org`, `test.com`, and `demo.net`. |
+| **Fix Type** | Hardcoded logic (`if domain == ...`). | Generic heuristic (Regex, DOM density). |
+| **Sustainability**| Fragile. Breaks on redesigns. | Robust. Handles future sites. |
+
+** 3. Freeze Criteria
+
+The following subsystems are **FROZEN**:
+
+1. **Classification Taxonomy:** No new categories (e.g., "Dental Clinic") without a full architectural review.
+2. **Parsing Strategies:** No new extraction strategies (e.g., adding an XPath specific to one WordPress theme).
+3. **Microservice Interface:** The API contract (`POST /extract`, `POST /jobs`) is stable.
+
+** 4. Permissible Modifications
+
+You may only modify the codebase if:
+
+1. **Systemic Null Safety:** Preventing crashes (500 Errors) caused by `NoneType` or missing attributes.
+2. **Generic Noise Reduction:** Adding high-confidence stopwords (e.g., "Copyright", "All rights reserved") that appear on >10% of sites.
+3. **Documentation:** Improving clarity, examples, and warnings.
+
+** 5. Code Review Checklist
+
+Before merging any PR, ask:
+- [ ] Does this fix apply to at least 3 other potential sites?
+- [ ] Did I avoid using the specific domain name in the logic?
+- [ ] Is this a regression in explainability?

@@ -1,0 +1,18 @@
+* Architectural Limitations and Ceilings
+
+This document explains the root causes of ORGA's current limitations. These are not "bugs" but consequences of the chosen non-LLM architecture.
+
+** 1. The "Semantic Gap" in Address Parsing
+
+*Issue:* ORGA sometimes captures "Visit us at 123 Main St" as the address string.
+*Cause:* The `AddressParser` relies on DOM density and regex termination signals. It does not "read" the sentence. It sees a block of text that *looks* like an address. Without an LLM to understand syntax, splitting "Visit us at" from "123 Main St" reliably is impossible across all languages/layouts without over-fitting.
+
+** 2. The "Context Blindness" in Classification
+
+*Issue:* An International Organization might get a "Association" tag.
+*Cause:* The classifier counts keywords. International Organizations use words like "member", "council", "assembly" frequently. To a frequency model, this looks like an Association. We mitigate this with suppression rules, but valid semantic overlaps will always exist.
+
+** 3. Single-Page Applications (SPAs)
+
+*Issue:* Poor discovery on React/Vue sites.
+*Cause:* ORGA's `Discoverer` scans static HTML `<a>` tags. It does not execute JavaScript to click buttons or render dynamic routes. If a site hides its contact info behind a JS interaction, ORGA will miss it. This is a trade-off for speed (0.6s vs 5s+ for headless browsers).

@@ -1,0 +1,44 @@
+* ORGA Architecture Overview
+
+** 1. System Context
+
+ORGA is a standalone extraction engine. It takes a URL (or list of URLs) as input and outputs a structured JSON profile. It can run as a CLI tool or as a set of Dockerized microservices.
+
+** 2. Core Components
+
+*** 1. The Fetcher (Network Layer)
+- **Tech:** `httpx`, `aiolimiter`
+- **Role:** Handles HTTP requests, retries, user-agent rotation, and concurrency limiting.
+- **Key Feature:** "Per-host" throttling to prevent banning.
+
+*** 2. The Discoverer (Navigation Layer)
+- **Tech:** `selectolax`
+- **Role:** Analyzes the landing page to find "high-value" sub-pages (`/contact`, `/about`, `/locations`).
+- **Logic:** Uses weighted keyword heuristics on anchor tags to prioritize navigation.
+
+*** 3. The Parser (Extraction Layer)
+- **Tech:** `selectolax`, `phonenumbers`, `email-validator`
+- **Role:** Extracts raw entities from the DOM.
+- **Strategies:**
+  - *JSON-LD:* Extracts structured schema.org data (High confidence).
+  - *Regex:* Scans text for phones/emails (Medium confidence).
+  - *Heuristic DOM:* Scans footers/contact blocks for addresses.
+
+*** 4. The Classifier (Intelligence Layer)
+- **Tech:** Custom Weighted Rule Engine + Bayesian Fallback
+- **Role:** Determines the organization type (e.g., Hospital, University).
+- **Process:**
+  1. *Page Scoring:* Scores each page against a taxonomy (Tier 1 Rules).
+  2. *Aggregation:* `ClassificationAggregator` combines scores, applying weights (About > News).
+  3. *Suppression:* High-confidence tags (Hospital) suppress low-confidence noise (Association).
+
+*** 5. The Merger (Governance Layer)
+- **Role:** The final gatekeeper.
+- **Tasks:** Deduplicates contacts, normalizes phone numbers (E.164), and filters out junk (e.g., social links to "twitter.com/share").
+
+** 3. Microservice Design
+
+The system is split into two containers for scalability:
+
+- **Extractor Service:** Stateless. Handles single requests. Good for scaling horizontally.
+- **Job Service:** Stateful (in-memory or Redis). Manages long-running batches and tracks progress.
