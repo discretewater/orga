@@ -12,7 +12,7 @@ The current ORGA extraction and classification pipeline deliberately avoids Larg
 
 *Why avoid LLMs?*
 - **Interpretability:** Every extraction decision and category score can be directly traced back to a specific rule, keyword, or page zone in the ~debug_info~.
-- **Cost & Speed:** The system processes multiple pages per organization in sub-second latencies (~0.6s avg per URL) with minimal CPU/Memory overhead.
+- **Cost & Speed:** The system processes multiple pages per organization in sub-second latencies (~0.63s avg per URL across a 26-target batch test) with minimal CPU/Memory overhead.
 - **Engineering Control:** It ensures predictable failures rather than hallucinatory drift.
 
 ** 2. Capabilities & Ceilings

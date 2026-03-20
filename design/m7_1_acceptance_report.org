@@ -17,7 +17,7 @@ The primary goal of M7 and M7.1 was to advance the classification subsystem from
 
 The system is now formally **FROZEN**.
 
-- **Stability:** 100% success rate on the validation batch with a ~0.65s/URL processing speed. No systemic 500 errors or `NoneType` crashes remain.
+- **Stability:** 100% success rate on the 26-target validation batch with a ~0.63s/URL average processing speed. No systemic 500 errors or `NoneType` crashes remain.
 - **Classification Convergence:** Primary categories are highly accurate. Peripheral noise is effectively mitigated.
 - **Explainability:** Full decision trees, score distributions, and suppression rationales are embedded in the response payload's `debug_info`.
 

@@ -44,7 +44,7 @@ ORGA is a Python-based profiling engine and microservice suite designed to auton
 
 In an era of generative AI, why build a deterministic extractor?
 
-1. **Extreme Speed & Cost Efficiency:** ORGA processes a full organization (navigating up to 5 sub-pages like `/about` or `/contact`) in **under 0.7 seconds** per site. It requires negligible CPU/Memory overhead, allowing you to process 10,000 organizations for pennies rather than dollars.
+1. **Extreme Speed & Cost Efficiency:** ORGA processes a full organization (navigating up to 5 sub-pages like `/about` or `/contact`) in **under 0.7 seconds** per site *(empirically benchmarked at ~0.63s average across 26 complex institutional domains)*. It requires negligible CPU/Memory overhead, allowing you to process 10,000 organizations for pennies rather than dollars.
 2. **100% Explainability:** Every extracted phone number, every inferred category (e.g., `Hospital` vs. `University`), and every discarded link is fully traceable. The JSON payload includes a `debug_info` block detailing the exact CSS selector, regex match, or weighted rule path that produced the result.
 3. **No Hallucinations:** When ORGA fails, it fails predictably (e.g., returning an empty field). It will never invent a phone number or confidently hallucinate an office address.
 
