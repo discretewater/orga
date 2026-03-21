@@ -1,7 +1,13 @@
-from typing import List, Dict, Any, Optional
+from typing import Any, Dict, List, Optional
+
 from orga.model import (
-    OrganizationProfile, Evidence, Warning, 
-    WarningSeverity, Confidence, Location, ContactKind
+    Confidence,
+    ContactKind,
+    Evidence,
+    Location,
+    OrganizationProfile,
+    Warning,
+    WarningSeverity,
 )
 
 # Default Weights and Reliabilities for Evidence Types
@@ -23,7 +29,7 @@ class ScoringEngine:
     Implements mathematical scoring formulas from Design Document Section 12.3.
     """
 
-    def calculate_field_score(self, evidences: List[Evidence]) -> float:
+    def calculate_field_score(self, evidences: list[Evidence]) -> float:
         """
         Calculate field-level score using weighted average formula:
         score = sum(w_i * r_i) / sum(w_i)
@@ -91,7 +97,7 @@ class WarningRegistry:
     Standardized Warning Codes implementation (Design Doc 12.4.1).
     """
 
-    def scan_for_warnings(self, profile: OrganizationProfile) -> List[Warning]:
+    def scan_for_warnings(self, profile: OrganizationProfile) -> list[Warning]:
         """
         Scan a profile and generate standardized warnings according to the contract.
         """

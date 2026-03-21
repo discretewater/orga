@@ -1,7 +1,15 @@
-from orga.parse.fields.classifier import CategoryClassifierStrategy, WeightedHeuristicClassifier, CategoryClassifier
-from orga.parse.fields.parsers import BaseFieldParser, ContactParser, AddressParser
+from orga.parse.fields.classifier import (
+    CategoryClassifier,
+    CategoryClassifierStrategy,
+    WeightedHeuristicClassifier,
+)
+from orga.parse.fields.parsers import AddressParser, BaseFieldParser, ContactParser
 
 __all__ = [
-    "BaseFieldParser", "ContactParser", "AddressParser", 
-    "CategoryClassifierStrategy", "WeightedHeuristicClassifier", "CategoryClassifier"
+    "AddressParser",
+    "BaseFieldParser",
+    "CategoryClassifier",
+    "CategoryClassifierStrategy",
+    "ContactParser",
+    "WeightedHeuristicClassifier"
 ]

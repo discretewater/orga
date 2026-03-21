@@ -1,20 +1,27 @@
 import re
 from abc import ABC, abstractmethod
-from typing import List, Dict, Any, TypeVar, Callable, Set, Tuple, Optional
-from urllib.parse import urlparse, urlunparse
 from collections import Counter
+from collections.abc import Callable
+from typing import Any, TypeVar
+from urllib.parse import urlparse, urlunparse
 
-from orga.model import (
-    OrganizationProfile, Contact, ContactKind, 
-    Location, Address, Evidence, Warning, Confidence
-)
+from orga.governance import ScoringEngine, WarningRegistry
 from orga.merge.constants import (
-    SOCIAL_PLATFORMS, ADDRESS_ABBREVIATIONS, 
-    PHONE_MIN_DIGITS, PHONE_MAX_REPETITION_RATIO,
-    GENERIC_SHARING_QUERY_KEYS
+    ADDRESS_ABBREVIATIONS,
+    GENERIC_SHARING_QUERY_KEYS,
+    PHONE_MAX_REPETITION_RATIO,
+    PHONE_MIN_DIGITS,
+    SOCIAL_PLATFORMS,
+)
+from orga.model import (
+    Address,
+    Confidence,
+    Contact,
+    Evidence,
+    Location,
+    OrganizationProfile,
 )
 from orga.registry import registry
-from orga.governance import ScoringEngine, WarningRegistry
 
 T = TypeVar('T')
 
@@ -72,11 +79,11 @@ class ProfilePostProcessor(MergerStrategy):
 
     def _process_contacts(
         self, 
-        contacts: List[Contact], 
+        contacts: list[Contact], 
         normalizer: Callable[[str], str],
         validator: Callable[[str], bool]
-    ) -> Tuple[List[Contact], List[Dict[str, Any]]]:
-        merged: Dict[str, Contact] = {}
+    ) -> tuple[list[Contact], list[dict[str, Any]]]:
+        merged: dict[str, Contact] = {}
         rejected = []
         
         for c in contacts:
@@ -119,11 +126,11 @@ class ProfilePostProcessor(MergerStrategy):
             
         return results, rejected
 
-    def _process_locations(self, locations: List[Location]) -> List[Location]:
+    def _process_locations(self, locations: list[Location]) -> list[Location]:
         """
         Deduplicates locations based on Fingerprint (Postal+StreetNumber) or Normalized Raw.
         """
-        merged: Dict[str, Location] = {}
+        merged: dict[str, Location] = {}
         
         for loc in locations:
             # 1. Normalize raw address
@@ -156,7 +163,7 @@ class ProfilePostProcessor(MergerStrategy):
             
         return list(merged.values())
 
-    def _sanitize_final_locations(self, locations: List[Location]) -> List[Location]:
+    def _sanitize_final_locations(self, locations: list[Location]) -> list[Location]:
         """
         M6.1 Conservative Gatekeeper:
         Filters out locations that look like ISO standards, UI noise, or spam.
@@ -307,8 +314,8 @@ class ProfilePostProcessor(MergerStrategy):
             return False
 
     def _refresh_governance(self, profile: OrganizationProfile):
-        accepted_ev: Set[Tuple[str, str, str]] = set()
-        internal_ev: List[Evidence] = []
+        accepted_ev: set[tuple[str, str, str]] = set()
+        internal_ev: list[Evidence] = []
         
         for c in (profile.phones + profile.emails + profile.social_links):
             for ev in c.evidence:

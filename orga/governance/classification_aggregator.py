@@ -1,7 +1,8 @@
-from typing import List, Dict, Any, Tuple
 from collections import defaultdict
 from urllib.parse import urlparse
+
 from orga.parse.fields.classifier import ClassificationResult
+
 
 class ClassificationAggregator:
     """
@@ -32,7 +33,7 @@ class ClassificationAggregator:
     # Minimum score to be considered a Primary candidate after aggregation
     PRIMARY_THRESHOLD = 3.0 
 
-    def aggregate(self, results: List[Tuple[str, ClassificationResult]]) -> List[str]:
+    def aggregate(self, results: list[tuple[str, ClassificationResult]]) -> list[str]:
         """
         Aggregates classification results from multiple pages.
         Args:

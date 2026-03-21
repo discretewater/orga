@@ -1,16 +1,17 @@
 import pytest
+
+# Assuming a base class or interface definition exists
 from orga.registry import StrategyRegistry
-# 假设存在一个基类或接口定义
-from orga.fetch import FetchStrategy
+
 
 class TestStrategyRegistry:
     """
-    测试策略注册机制（Registry）。
+    Test the Strategy Registry mechanism.
     """
 
     def test_register_and_get_strategy(self):
         """
-        测试注册一个新的策略并成功获取它。
+        Test registering a new strategy and retrieving it successfully.
         """
         registry = StrategyRegistry()
         
@@ -19,11 +20,11 @@ class TestStrategyRegistry:
 
         registry.register("fetcher", "mock_fetcher", MockFetcher)
         fetched_class = registry.get("fetcher", "mock_fetcher")
-        assert fetched_class == MockFetcher
+        assert fetched_class is MockFetcher
 
     def test_get_non_existent_strategy(self):
         """
-        测试获取不存在的策略时应抛出异常。
+        Test that retrieving a non-existent strategy raises an exception.
         """
         registry = StrategyRegistry()
         with pytest.raises(KeyError):
@@ -31,7 +32,7 @@ class TestStrategyRegistry:
 
     def test_list_strategies(self):
         """
-        测试列出特定类型下的所有策略。
+        Test listing all strategies under a specific type.
         """
         registry = StrategyRegistry()
         registry.register("parser", "parser_a", object)
@@ -43,7 +44,8 @@ class TestStrategyRegistry:
 
     def test_duplicate_registration_error(self):
         """
-        测试重复注册同名策略时，默认应抛出错误或覆盖（取决于设计，这里假设抛错以保证严谨性）。
+        Test that duplicate registration of a strategy with the same name throws an error by default
+        (assuming throwing an error ensures strictness based on design).
         """
         registry = StrategyRegistry()
         registry.register("parser", "uniq_parser", object)
@@ -53,11 +55,11 @@ class TestStrategyRegistry:
 
     def test_overwrite_registration(self):
         """
-        测试允许强制覆盖注册（如果提供了 force=True 参数）。
+        Test allowing forced overwrite of a registration (if force=True is provided).
         """
         registry = StrategyRegistry()
         registry.register("parser", "parser_x", int)
         
-        # 假设 register 支持 force 参数或 exist_ok
+        # Assuming register supports force or exist_ok parameter
         registry.register("parser", "parser_x", str, force=True)
-        assert registry.get("parser", "parser_x") == str
+        assert registry.get("parser", "parser_x") is str

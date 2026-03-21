@@ -1,6 +1,6 @@
-import pytest
-from orga.model import Document, Address
+from orga.model import Document
 from orga.parse.fields.parsers import AddressParser
+
 
 class TestAddressParserAdvanced:
     """

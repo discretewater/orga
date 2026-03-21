@@ -1,9 +1,11 @@
-import pytest
 import asyncio
-import time
+from unittest.mock import MagicMock, patch
+
+import pytest
+
 from orga.fetch.httpx_fetcher import HttpxFetcher
-from orga.model.config import OrgaConfig, FetchConfig
-from unittest.mock import MagicMock, patch, AsyncMock
+from orga.model.config import FetchConfig, OrgaConfig
+
 
 class TestConcurrencyControl:
     """
@@ -43,7 +45,7 @@ class TestConcurrencyControl:
         """
         Verify that requests are throttled over time if a rate limit is applied.
         Note: This depends on if we implement explicit rate limiting (requests/sec).
-        Design doc mentions '礼貌读取' (polite reading).
+        Design doc mentions 'polite reading'.
         """
         # For this test, we assume a simple implementation of delay between requests
         # if concurrency is 1.

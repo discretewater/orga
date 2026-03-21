@@ -1,9 +1,14 @@
 import pytest
-from orga.model import (
-    OrganizationProfile, Location, Address, Contact, 
-    ContactKind, Evidence, Warning, WarningSeverity
-)
+
 from orga.governance import ScoringEngine, WarningRegistry
+from orga.model import (
+    Address,
+    Evidence,
+    Location,
+    OrganizationProfile,
+    WarningSeverity,
+)
+
 
 class TestScoringEngine:
     """

@@ -1,6 +1,9 @@
-from typing import List, Dict, Any, Optional
+from typing import Any
+
 from pydantic import BaseModel, Field
+
 from orga.parse.taxonomy import DEFAULT_TAXONOMY
+
 
 class ZoneWeightConfig(BaseModel):
     """
@@ -37,7 +40,7 @@ class DiscoveryConfig(BaseModel):
     strategy: str = "heuristic"
 
 class ParseConfig(BaseModel):
-    strategies: List[str] = ["json_ld", "meta_tags", "regex", "heuristic"]
+    strategies: list[str] = ["json_ld", "meta_tags", "regex", "heuristic"]
     category_strategy: str = "weighted_heuristic"
     classification_thresholds: ClassificationThresholds = Field(default_factory=ClassificationThresholds)
     
@@ -60,7 +63,7 @@ class OrgaConfig(BaseModel):
     # Shared weights
     weights: ZoneWeightConfig = Field(default_factory=ZoneWeightConfig)
     
-    taxonomy: Dict[str, Any] = Field(default_factory=lambda: DEFAULT_TAXONOMY, description="Weighted taxonomy definitions")
+    taxonomy: dict[str, Any] = Field(default_factory=lambda: DEFAULT_TAXONOMY, description="Weighted taxonomy definitions")
     
     def __init__(self, **data: Any):
         super().__init__(**data)

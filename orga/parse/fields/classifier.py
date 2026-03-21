@@ -1,16 +1,18 @@
-from abc import ABC, abstractmethod
-from typing import List, Dict, Any, Tuple, Optional, Set
-from dataclasses import dataclass, field
 import math
-import re
+from abc import ABC, abstractmethod
+from dataclasses import dataclass, field
+from typing import Any
+
+from selectolax.parser import HTMLParser
+
 from orga.model import Document
 from orga.registry import registry
-from selectolax.parser import HTMLParser
+
 
 @dataclass
 class ClassificationResult:
-    categories: List[str]
-    debug_info: Dict[str, Any] = field(default_factory=dict)
+    categories: list[str]
+    debug_info: dict[str, Any] = field(default_factory=dict)
 
 class CategoryClassifierStrategy(ABC):
     """
@@ -32,7 +34,7 @@ class RuleBasedClassifier(CategoryClassifierStrategy):
         "body": 1.0
     }
 
-    def __init__(self, taxonomy: Dict[str, Any], weights: Dict[str, float] = None, threshold: float = 2.0):
+    def __init__(self, taxonomy: dict[str, Any], weights: dict[str, float] = None, threshold: float = 2.0):
         self.taxonomy = taxonomy
         self.zone_weights = weights or self.ZONE_WEIGHTS
         self.threshold = threshold
@@ -117,7 +119,7 @@ class BayesianClassifier(CategoryClassifierStrategy):
     """
     THRESHOLD = 0.0 
 
-    def __init__(self, taxonomy: Dict[str, Any]):
+    def __init__(self, taxonomy: dict[str, Any]):
         self.taxonomy = taxonomy
 
     def classify(self, doc: Document) -> ClassificationResult:
@@ -180,9 +182,9 @@ class LayeredCategoryClassifier(CategoryClassifierStrategy):
     Implements Tier 1 -> Tier 2 flow with Margin Checks.
     """
     def __init__(self, 
-                 taxonomy: Dict[str, Any], 
-                 weights: Dict[str, float] = None, 
-                 thresholds: Dict[str, float] = None):
+                 taxonomy: dict[str, Any], 
+                 weights: dict[str, float] = None, 
+                 thresholds: dict[str, float] = None):
         
         self.taxonomy = taxonomy
         self.weights = weights
@@ -261,9 +263,9 @@ class LayeredCategoryClassifier(CategoryClassifierStrategy):
 
 class WeightedHeuristicClassifier(LayeredCategoryClassifier):
     def __init__(self, 
-                 taxonomy: Dict[str, Any] = None, 
-                 weights: Dict[str, float] = None, 
-                 config: Dict[str, Any] = None,
+                 taxonomy: dict[str, Any] = None, 
+                 weights: dict[str, float] = None, 
+                 config: dict[str, Any] = None,
                  min_score: float = None, # Backwards compat
                  margin: float = None     # Backwards compat
                  ):

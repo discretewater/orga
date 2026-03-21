@@ -1,15 +1,15 @@
-import pytest
-from orga.parse.fields import ContactParser, AddressParser, CategoryClassifier
-from orga.model import Document, Contact, Address, ContactKind, Evidence
+from orga.model import ContactKind, Document
+from orga.parse.fields import AddressParser, CategoryClassifier, ContactParser
+
 
 class TestContactParser:
     """
-    测试联系方式解析器。
+    Test contact parser.
     """
 
     def test_extract_emails_complex(self):
         """
-        测试复杂的 Email 提取场景，包括混淆的 Email 和多个 Email。
+        Test complex Email extraction scenarios, including obfuscated Emails and multiple Emails.
         """
         content = """
         <div>
@@ -51,7 +51,7 @@ class TestContactParser:
 
     def test_extract_social_links(self):
         """
-        测试从页脚或图标提取社交媒体链接。
+        Test extracting social media links from footer or icons.
         """
         content = """
         <footer>
@@ -72,9 +72,9 @@ class TestContactParser:
 
     def test_extract_phones_strict_validation(self):
         """
-        [新增] 测试严格的电话号码校验。
-        应排除：日期、长数字串、无效号码。
-        应保留：合法格式号码。
+        [New] Test strict phone number validation.
+        Should exclude: dates, long numeric strings, invalid numbers.
+        Should retain: valid format numbers.
         """
         content = """
         <body>
@@ -94,10 +94,10 @@ class TestContactParser:
         phones = [c for c in contacts if c.kind == ContactKind.PHONE]
         phone_values = [p.value for p in phones]
 
-        # 验证正向用例
+        # Verify positive cases
         assert any("613-737-7600" in v or "+16137377600" in v for v in phone_values)
         
-        # 验证负向用例 (不应包含)
+        # Verify negative cases (should not include)
         assert "2026-02-24" not in phone_values
         assert "00000000-0000-000" not in phone_values
         assert "15018176-5" not in phone_values
@@ -105,8 +105,8 @@ class TestContactParser:
 
     def test_phone_confidence_scoring(self):
         """
-        [新增] 测试电话号码的置信度评分。
-        tel 链接应该比纯文本 regex 具有更高的置信度。
+        [New] Test confidence scoring for phone numbers.
+        tel links should have higher confidence than plain text regex.
         """
         content = """
         <a href="tel:+12024561414">Call High Confidence</a>
@@ -122,19 +122,19 @@ class TestContactParser:
         text_phone = next((p for p in phones if "+12024561111" in p.value), None)
         assert tel_phone is not None
         assert text_phone is not None
-        # 验证置信度差异
+        # Verify confidence difference
         assert tel_phone.confidence > text_phone.confidence
-        assert tel_phone.confidence >= 0.8 # 假设高置信度阈值
+        assert tel_phone.confidence >= 0.8 # Assuming high confidence threshold
         assert text_phone.confidence < 0.8
 
 class TestAddressParser:
     """
-    测试地址解析器。
+    Test address parser.
     """
 
     def test_extract_address_from_schema_org(self):
         """
-        测试从 JSON-LD (Schema.org) 中提取地址。
+        Test extracting address from JSON-LD (Schema.org).
         """
         content = """
         <script type="application/ld+json">
@@ -166,7 +166,7 @@ class TestAddressParser:
 
     def test_extract_address_regex_fallback(self):
         """
-        测试当无结构化数据时，基于正则或启发式规则提取地址。
+        Test extracting address based on regex or heuristic rules when no structured data is available.
         """
         content = """
         <footer>
@@ -183,8 +183,8 @@ class TestAddressParser:
 
     def test_extract_address_from_footer_dom(self):
         """
-        [新增] 测试从 Footer 或特定 DOM 区域提取地址。
-        优先于全文扫描。
+        [New] Test extracting address from Footer or specific DOM areas.
+        Prioritized over full-text scanning.
         """
         content = """
         <html>
@@ -205,21 +205,21 @@ class TestAddressParser:
         locations = parser.parse(doc)
         
         assert len(locations) > 0
-        # 验证是否提取到了 Footer 中的地址
+        # Verify if the address in the Footer is extracted
         assert "789 Footer Lane" in locations[0].address.raw
-        # 验证不应该提取到正文的随机数字 (如果正则够严谨)
+        # Verify random numbers in the body should not be extracted (if regex is strict enough)
         address_texts = [l.address.raw for l in locations]
         assert not any("12345" in a and "Lane" not in a for a in address_texts)
 
 class TestCategoryClassifier:
     """
-    测试分类器。
+    Test classifier.
     """
     
     def test_classify_by_keywords_baseline(self):
         """
-        [新增] 测试基于关键词的基线分类。
-        即使没有 LLM，也应能识别常见类别。
+        [New] Test keyword-based baseline classification.
+        Should be able to identify common categories even without LLM.
         """
         content = """
         <title>Children's Hospital of Eastern Ontario</title>
@@ -228,7 +228,7 @@ class TestCategoryClassifier:
         """
         doc = Document(url="https://cheo.test", content=content, content_type="text/html", status_code=200)
         
-        # 配置 taxonomy
+        # Configure taxonomy
         taxonomy_config = {
             "Healthcare": ["hospital", "clinic", "healthcare", "patient"],
             "Education": ["university", "school", "college"]

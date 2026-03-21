@@ -1,9 +1,10 @@
 import pytest
 
+
 @pytest.fixture
 def sample_html_content() -> str:
     """
-    返回一个简单的 HTML 内容用于测试。
+    Returns a simple HTML content for testing.
     """
     return """
     <html>
@@ -19,7 +20,7 @@ def sample_html_content() -> str:
 @pytest.fixture
 def complex_html_content() -> str:
     """
-    返回一个包含多种信号（JSON-LD, Meta, Text）的复杂 HTML。
+    Returns a complex HTML containing multiple signals (JSON-LD, Meta, Text).
     """
     return """
     <html>
@@ -62,7 +63,7 @@ def complex_html_content() -> str:
 @pytest.fixture
 def sample_config_dict() -> dict:
     """
-    返回一个基础的配置字典。
+    Returns a basic configuration dictionary.
     """
     return {
         "fetch": {

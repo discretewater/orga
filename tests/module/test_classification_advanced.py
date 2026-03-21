@@ -1,10 +1,10 @@
 import pytest
+
 from orga.model import Document
 from orga.parse.fields.classifier import (
-    RuleBasedClassifier, 
-    BayesianClassifier, 
-    LayeredCategoryClassifier
+    LayeredCategoryClassifier,
 )
+
 
 @pytest.fixture
 def sample_taxonomy():

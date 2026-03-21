@@ -3,6 +3,7 @@ import json
 import sys
 import time
 from datetime import datetime
+
 from fastapi.testclient import TestClient
 
 # Import Apps directly (Internal Mode)
@@ -38,11 +39,11 @@ async def run_internal_test():
             resp_job = job_client.get("/health")
             await log(f, f"Job Service:       {resp_job.status_code} | {resp_job.json()}")
         except Exception as e:
-            await log(f, f"FATAL: Internal app instantiation failed. {str(e)}")
+            await log(f, f"FATAL: Internal app instantiation failed. {e!s}")
             return
 
         # Read URLs
-        with open(BATCH_FILE, "r") as bf:
+        with open(BATCH_FILE) as bf:
             urls = [line.strip() for line in bf if line.strip()]
         await log(f, f"\nLoaded {len(urls)} Validation Targets from {BATCH_FILE}")
 
@@ -88,7 +89,7 @@ async def run_internal_test():
                 await log(f, f"❌ FAILED: {resp.status_code}")
                 await log(f, f"  Error: {resp.text}")
         except Exception as e:
-            await log(f, f"❌ EXCEPTION: {str(e)}")
+            await log(f, f"❌ EXCEPTION: {e!s}")
 
         # 3. Batch Job Processing
         await log(f, "\n--- Phase 3: Batch Processing Stress Test ---")
@@ -104,7 +105,7 @@ async def run_internal_test():
                 await log(f, f"Submission Failed: {resp.text}")
                 return
         except Exception as e:
-            await log(f, f"Submission Error: {str(e)}")
+            await log(f, f"Submission Error: {e!s}")
             return
 
         # Poll

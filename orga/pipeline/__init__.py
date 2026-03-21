@@ -1,16 +1,26 @@
-from typing import List, Optional
 import asyncio
+from typing import List, Optional
 
-from orga.model import Document, DocumentBundle, OrganizationProfile, OrgaConfig, Warning, WarningSeverity, Confidence
-from orga.registry import registry
+import orga.discover
 
 # Ensure strategies are registered by importing their modules
 import orga.fetch.httpx_fetcher
-import orga.discover
-import orga.parse.fields.parsers
 import orga.parse.fields.classifier
+import orga.parse.fields.parsers
+
 # Use absolute import to ensure registration
 from orga.merge.processor import ProfilePostProcessor
+from orga.model import (
+    Confidence,
+    Document,
+    DocumentBundle,
+    OrgaConfig,
+    OrganizationProfile,
+    Warning,
+    WarningSeverity,
+)
+from orga.registry import registry
+
 
 class OrgaPipeline:
     """
@@ -26,7 +36,7 @@ class OrgaPipeline:
         "Please wait while we verify", "Checking your browser"
     ]
     
-    def __init__(self, config: Optional[OrgaConfig] = None):
+    def __init__(self, config: OrgaConfig | None = None):
         self.config = config or OrgaConfig()
         
         # 1. Instantiate Fetcher from registry
@@ -66,7 +76,7 @@ class OrgaPipeline:
         merger_cls = registry.get("merger", self.config.merge.strategy)
         self.merger = merger_cls()
 
-    async def run(self, documents: List[Document]) -> OrganizationProfile:
+    async def run(self, documents: list[Document]) -> OrganizationProfile:
         """
         Process a list of documents and generate an Organization Profile.
         """
@@ -77,7 +87,7 @@ class OrgaPipeline:
             return profile
             
         # Temp storage for classification results to be aggregated later
-        page_classifications: List[Tuple[str, Any]] = []
+        page_classifications: list[Tuple[str, Any]] = []
             
         # Check entry document (usually the first one)
         entry_doc = documents[0]

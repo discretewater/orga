@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
-from typing import List
+
 from orga.model import Document
+
 
 class FetchStrategy(ABC):
     @abstractmethod

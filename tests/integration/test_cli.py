@@ -1,8 +1,7 @@
-import pytest
+
 from typer.testing import CliRunner
+
 from orga.cli.main import app
-import json
-from pathlib import Path
 
 runner = CliRunner()
 
@@ -60,8 +59,8 @@ fetch:
         
         output_file = tmp_path / "output.jsonl"
         
-        from orga.pipeline import OrgaPipeline
         from orga.model import OrganizationProfile
+        from orga.pipeline import OrgaPipeline
         
         async def mock_run_from_url(self, url):
             profile = OrganizationProfile(name=f"Mock for {url}")
@@ -88,8 +87,8 @@ fetch:
         
         output_file = tmp_path / "output_debug.jsonl"
         
-        from orga.pipeline import OrgaPipeline
         from orga.model import OrganizationProfile
+        from orga.pipeline import OrgaPipeline
         
         async def mock_run_from_url(self, url):
             profile = OrganizationProfile(name=f"Mock for {url}")
@@ -109,8 +108,8 @@ fetch:
         """
         Test single URL parse with pretty output.
         """
-        from orga.pipeline import OrgaPipeline
         from orga.model import OrganizationProfile
+        from orga.pipeline import OrgaPipeline
         
         async def mock_run_from_url(self, url):
             return OrganizationProfile(name="Single Mock")
@@ -126,8 +125,8 @@ fetch:
         """
         Test that --debug flag populates debug_info and outputs internal evidence.
         """
+        from orga.model import Evidence, OrganizationProfile
         from orga.pipeline import OrgaPipeline
-        from orga.model import OrganizationProfile, Evidence
         
         async def mock_run_from_url(self, url):
             profile = OrganizationProfile(name="Debug Mock")

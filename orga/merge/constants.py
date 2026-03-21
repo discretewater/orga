@@ -1,4 +1,3 @@
-import re
 
 # Social Media Platforms and their sharing patterns
 SOCIAL_PLATFORMS = {

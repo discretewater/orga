@@ -1,34 +1,35 @@
-from fastapi import FastAPI, BackgroundTasks, HTTPException
-from pydantic import BaseModel
-from typing import List, Dict, Any, Optional
-import uuid
 import asyncio
+import uuid
 from datetime import datetime
+from typing import Any
 
-from orga.pipeline import OrgaPipeline
+from fastapi import BackgroundTasks, FastAPI, HTTPException
+from pydantic import BaseModel
+
 from orga.model import OrgaConfig
+from orga.pipeline import OrgaPipeline
 
 app = FastAPI(title="ORGA Job Service")
 
 # In-memory store (for MVP)
-job_store: Dict[str, Any] = {}
+job_store: dict[str, Any] = {}
 
 class JobSubmitRequest(BaseModel):
-    urls: List[str]
-    config: Optional[Dict[str, Any]] = None
+    urls: list[str]
+    config: dict[str, Any] | None = None
 
 class JobResponse(BaseModel):
     id: str
     status: str
     submitted_at: datetime
-    completed_at: Optional[datetime] = None
-    results: List[Dict[str, Any]] = []
-    errors: List[str] = []
+    completed_at: datetime | None = None
+    results: list[dict[str, Any]] = []
+    errors: list[str] = []
 
 # Global pipeline
 pipeline = OrgaPipeline(OrgaConfig())
 
-async def process_job(job_id: str, urls: List[str], custom_config: Optional[Dict[str, Any]]):
+async def process_job(job_id: str, urls: list[str], custom_config: dict[str, Any] | None):
     job = job_store[job_id]
     job["status"] = "processing"
     
@@ -56,7 +57,7 @@ async def process_job(job_id: str, urls: List[str], custom_config: Optional[Dict
             print(f"ERROR processing {url}:")
             traceback.print_exc()
             # We don't want one failure to crash the whole job
-            errors.append(f"Failed {url}: {str(e)}")
+            errors.append(f"Failed {url}: {e!s}")
             return None
 
     # Run all URLs concurrently

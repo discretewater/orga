@@ -1,6 +1,8 @@
 import pytest
-from orga.model import Location, Address, Evidence
+
 from orga.merge.processor import ProfilePostProcessor
+from orga.model import Address, Evidence, Location
+
 
 class TestLocationConsolidation:
     """

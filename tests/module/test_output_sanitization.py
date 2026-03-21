@@ -1,6 +1,8 @@
 import pytest
-from orga.model import OrganizationProfile, Location, Address, Evidence
+
 from orga.merge.processor import ProfilePostProcessor
+from orga.model import Address, Location, OrganizationProfile
+
 
 class TestOutputSanitization:
     """
@@ -15,13 +17,13 @@ class TestOutputSanitization:
     def test_reject_cibse_iso_pollution(self, processor):
         """
         Regression Test for CIBSE:
-        Raw: ",, tel +44 (0) 20 8772 3649 or visit the, Certification website, Management Systems certification, : ISO 9001, 14001, 45001, 50001 – email"
+        Raw: ",, tel +44 (0) 20 8772 3649 or visit the, Certification website, Management Systems certification, : ISO 9001, 14001, 45001, 50001 - email"
         Postal Code: "14001" (False positive)
         
         Expected: This location should be REJECTED or heavily downgraded.
         """
         bad_address = Address(
-            raw=",, tel +44 (0) 20 8772 3649 or visit the, Certification website, Management Systems certification, : ISO 9001, 14001, 45001, 50001 – email",
+            raw=",, tel +44 (0) 20 8772 3649 or visit the, Certification website, Management Systems certification, : ISO 9001, 14001, 45001, 50001 - email",
             postal_code="14001"
         )
         profile = OrganizationProfile(

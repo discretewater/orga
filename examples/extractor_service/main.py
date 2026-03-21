@@ -1,14 +1,16 @@
+from typing import Any
+
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, HttpUrl
-from typing import Optional, Dict, Any
-from orga.pipeline import OrgaPipeline
+
 from orga.model import OrgaConfig, OrganizationProfile
+from orga.pipeline import OrgaPipeline
 
 app = FastAPI(title="ORGA Extractor Service")
 
 class ExtractRequest(BaseModel):
     url: HttpUrl
-    config: Optional[Dict[str, Any]] = None
+    config: dict[str, Any] | None = None
 
 # Initialize pipeline globally
 # In production, config might come from env vars

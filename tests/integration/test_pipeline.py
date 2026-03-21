@@ -1,18 +1,24 @@
+
 import pytest
-from unittest.mock import MagicMock
+
+from orga.model import (
+    Document,
+    DocumentBundle,
+    OrgaConfig,
+)
 from orga.pipeline import OrgaPipeline
-from orga.model import OrgaConfig, OrganizationProfile, Document, DocumentBundle, Warning, Confidence
+
 
 class TestPipelineIntegration:
     """
-    测试核心 Pipeline 的集成流程，覆盖单文档与文档束（Bundle）场景。
+    Test integration flow of the core Pipeline, covering single Document and DocumentBundle scenarios.
     """
 
     @pytest.mark.asyncio
     async def test_pipeline_with_document_bundle(self):
         """
-        测试传入 DocumentBundle 时的处理流程。
-        Pipeline 应能聚合来自 Entry 页和 Contact 页的信息。
+        Test processing flow when DocumentBundle is passed.
+        Pipeline should be able to aggregate information from Entry page and Contact page.
         """
         entry_doc = Document(
             url="https://bundle.test",
@@ -43,7 +49,7 @@ class TestPipelineIntegration:
     @pytest.mark.asyncio
     async def test_pipeline_governance_integration(self):
         """
-        测试 Pipeline 是否正确集成了治理模块（Warning, Confidence）。
+        Test if the Pipeline correctly integrates the governance modules (Warning, Confidence).
         """
         low_quality_doc = Document(
             url="https://lowquality.test",
@@ -56,21 +62,21 @@ class TestPipelineIntegration:
         profile = await pipeline.run([low_quality_doc])
         
         warning_codes = [w.code for w in profile.warnings]
-        # 验证空 Profile 应产生警告
+        # Verify empty Profile should produce warnings
         assert "EMPTY_PROFILE" in warning_codes or "LOW_CONFIDENCE" in warning_codes
         
-        # 验证置信度应较低
+        # Verify confidence should be low
         if profile.confidence:
             assert profile.confidence.overall_score < 0.5
 
     @pytest.mark.asyncio
     async def test_pipeline_confidence_consistency(self):
         """
-        [新增] 测试置信度的一致性。
-        如果字段置信度都很低，整体置信度不应过高。
+        [New] Test consistency of confidence.
+        If field confidences are all low, overall confidence should not be too high.
         """
-        # 模拟一个只有低置信度电话的文档
-        # 假设 parser 会提取出电话但因为是 regex，给低分
+        # Simulate a document with only a low-confidence phone number
+        # Assume parser extracts the phone but gives a low score because it is regex
         doc = Document(
             url="https://lowconf.test",
             content="<html>Call: 123-456-7890</html>",
@@ -81,21 +87,21 @@ class TestPipelineIntegration:
         pipeline = OrgaPipeline(OrgaConfig())
         profile = await pipeline.run([doc])
         
-        # 假设实现正确，电话置信度应 < 0.8
+        # Assuming correct implementation, phone confidence should be < 0.8
         if profile.phones:
             assert profile.phones[0].confidence < 0.8
         
-        # 整体置信度应受到影响，不应是 0.9 或 1.0
-        # 且如果有字段提取出来，confidence 对象就不应为空
+        # Overall confidence should be affected, should not be 0.9 or 1.0
+        # And if fields are extracted, the confidence object should not be empty
         assert profile.confidence is not None
         assert profile.confidence.overall_score < 0.8
 
     @pytest.mark.asyncio
     async def test_pipeline_warnings_for_missing_critical_fields(self):
         """
-        [新增] 测试当关键字段（如地址、分类）缺失时，产生 Warning。
+        [New] Test that a Warning is produced when critical fields (like address, categories) are missing.
         """
-        # 一个有名字但没地址、没分类的文档
+        # A document with a name but no address and no categories
         doc = Document(
             url="https://partial.test",
             content="<html><title>Partial Corp</title></html>",
@@ -108,15 +114,15 @@ class TestPipelineIntegration:
         
         warning_codes = [w.code for w in profile.warnings]
         
-        # 应该警告地址缺失
+        # Should warn about missing address
         assert "NO_LOCATION_FOUND" in warning_codes or "PARTIAL_PROFILE" in warning_codes
-        # 应该警告分类缺失
+        # Should warn about missing categories
         assert "CLASSIFICATION_LOW_CONFIDENCE" in warning_codes or "PARTIAL_PROFILE" in warning_codes
 
     @pytest.mark.asyncio
     async def test_pipeline_strategy_switching(self):
         """
-        测试通过配置切换策略。
+        Test switching strategies via configuration.
         """
         config = OrgaConfig(
             parse={"strategies": ["json_ld"]} 

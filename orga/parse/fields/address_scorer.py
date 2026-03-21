@@ -1,5 +1,6 @@
 import re
-from typing import Dict, Tuple, Any
+from typing import Any
+
 
 class AddressScorer:
     """
@@ -19,7 +20,7 @@ class AddressScorer:
         self.postal_regex = re.compile(f'(?:{self.POSTAL_US}|{self.POSTAL_UK}|{self.POSTAL_CA})', re.IGNORECASE)
         self.street_regex = re.compile(r'\d+\s+[\w\s,.-]+' + self.STREET_TYPES, re.IGNORECASE)
 
-    def calculate_score(self, raw_text: str, context: Dict[str, Any]) -> Tuple[float, Dict[str, float]]:
+    def calculate_score(self, raw_text: str, context: dict[str, Any]) -> tuple[float, dict[str, float]]:
         """
         Calculate score for a raw address candidate.
         Returns (score, breakdown_dict).

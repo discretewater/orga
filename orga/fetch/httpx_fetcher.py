@@ -1,13 +1,18 @@
-import httpx
 import asyncio
-from typing import Optional, List, Dict
-import tenacity
-from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
-from aiolimiter import AsyncLimiter
-from urllib.parse import urlparse
 
-from orga.model import Document, OrgaConfig, Warning, WarningSeverity, SourceKind
+import httpx
+import tenacity
+from aiolimiter import AsyncLimiter
+from tenacity import (
+    retry,
+    retry_if_exception_type,
+    stop_after_attempt,
+    wait_exponential,
+)
+
+from orga.model import Document, OrgaConfig, SourceKind, Warning, WarningSeverity
 from orga.registry import registry
+
 
 class FetchError(Exception):
     """Custom exception for fetch operations."""
@@ -21,8 +26,8 @@ class HttpxFetcher:
     
     # Static pool of semaphores and limiters to share across fetcher instances 
     # if using the same configuration.
-    _semaphores: Dict[int, asyncio.Semaphore] = {}
-    _limiters: Dict[int, AsyncLimiter] = {}
+    _semaphores: dict[int, asyncio.Semaphore] = {}
+    _limiters: dict[int, AsyncLimiter] = {}
 
     def __init__(self, config: OrgaConfig):
         self.config = config.fetch
@@ -52,7 +57,7 @@ class HttpxFetcher:
                     return await self._fetch_with_retry(url, headers)
                 except tenacity.RetryError as e:
                     last_exception = e.last_attempt.exception()
-                    message = f"Connection timed out (Max retries reached): {str(last_exception)}"
+                    message = f"Connection timed out (Max retries reached): {last_exception!s}"
                     return self._create_error_document(url, "FETCH_TIMEOUT", message, WarningSeverity.ERROR)
                 except httpx.TimeoutException:
                      return self._create_error_document(url, "FETCH_TIMEOUT", "Connection timed out", WarningSeverity.ERROR)
@@ -64,7 +69,7 @@ class HttpxFetcher:
         wait=wait_exponential(multiplier=1, min=2, max=10),
         retry=retry_if_exception_type((httpx.NetworkError, httpx.RemoteProtocolError, httpx.ReadTimeout, httpx.HTTPStatusError))
     )
-    async def _fetch_with_retry(self, url: str, headers: Dict[str, str]) -> Document:
+    async def _fetch_with_retry(self, url: str, headers: dict[str, str]) -> Document:
         # Note: AsyncClient is instantiated inside the retry block to ensure fresh connection pool if needed,
         # but for high performance we might want to share one client. 
         # Design Doc 7.2 suggests default fetcher should be a 'convenience layer'.
@@ -93,7 +98,7 @@ class HttpxFetcher:
 
             return self._create_document_from_response(response, warnings=warnings)
 
-    def _create_document_from_response(self, response: httpx.Response, warnings: List[Warning] = None) -> Document:
+    def _create_document_from_response(self, response: httpx.Response, warnings: list[Warning] = None) -> Document:
         return Document(
             url=str(response.url),
             content=response.text,

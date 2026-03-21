@@ -1,18 +1,21 @@
-from abc import ABC, abstractmethod
-from typing import List, Any, Dict, Optional
 import re
-from orga.model import Document, Contact, Evidence, ContactKind, Address, Location
+from abc import ABC, abstractmethod
+from typing import Any
+
 import phonenumbers
 from phonenumbers import PhoneNumberMatcher
-from orga.registry import registry
+
+from orga.model import Address, Contact, ContactKind, Document, Evidence, Location
 from orga.parse.fields.address_scorer import AddressScorer
+from orga.registry import registry
+
 
 class BaseFieldParser(ABC):
     """
     Base class for field parsers.
     """
     @abstractmethod
-    def parse(self, doc: Document) -> List[Any]:
+    def parse(self, doc: Document) -> list[Any]:
         pass
 
 class ContactParser(BaseFieldParser):
@@ -23,14 +26,14 @@ class ContactParser(BaseFieldParser):
     
     IGNORED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'svg', 'webp', 'js', 'css', 'woff', 'woff2', 'ttf', 'eot'}
 
-    def parse(self, doc: Document) -> List[Contact]:
+    def parse(self, doc: Document) -> list[Contact]:
         contacts = []
         contacts.extend(self._extract_emails(doc))
         contacts.extend(self._extract_phones(doc))
         contacts.extend(self._extract_socials(doc))
         return contacts
 
-    def _extract_emails(self, doc: Document) -> List[Contact]:
+    def _extract_emails(self, doc: Document) -> list[Contact]:
         try:
             email_pattern = re.compile(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b')
             from selectolax.parser import HTMLParser
@@ -88,7 +91,7 @@ class ContactParser(BaseFieldParser):
         except Exception:
             return False
 
-    def _extract_phones(self, doc: Document) -> List[Contact]:
+    def _extract_phones(self, doc: Document) -> list[Contact]:
         try:
             results = []
             found_numbers = set()
@@ -142,7 +145,7 @@ class ContactParser(BaseFieldParser):
             pass
         return None
 
-    def _extract_socials(self, doc: Document) -> List[Contact]:
+    def _extract_socials(self, doc: Document) -> list[Contact]:
         try:
             from selectolax.parser import HTMLParser
             tree = HTMLParser(doc.content)
@@ -196,13 +199,13 @@ class AddressParser(BaseFieldParser):
     def __init__(self):
         self.scorer = AddressScorer()
 
-    def parse(self, doc: Document) -> List[Location]:
+    def parse(self, doc: Document) -> list[Location]:
         locations = []
         locations.extend(self._extract_json_ld(doc))
         locations.extend(self._extract_heuristic_dom(doc))
         return locations
 
-    def _extract_json_ld(self, doc: Document) -> List[Location]:
+    def _extract_json_ld(self, doc: Document) -> list[Location]:
         import extruct
         try:
             data = extruct.extract(doc.content, base_url=doc.url, syntaxes=['json-ld'])
@@ -234,7 +237,7 @@ class AddressParser(BaseFieldParser):
         except Exception:
             return []
 
-    def _extract_heuristic_dom(self, doc: Document) -> List[Location]:
+    def _extract_heuristic_dom(self, doc: Document) -> list[Location]:
         try:
             from selectolax.parser import HTMLParser
             tree = HTMLParser(doc.content)
@@ -283,7 +286,7 @@ class AddressParser(BaseFieldParser):
         except Exception:
             return []
 
-    def _process_buffer(self, buffer: List[str], postal_regex, street_regex, results: List[Location], seen: set, zone_name: str, doc: Document):
+    def _process_buffer(self, buffer: list[str], postal_regex, street_regex, results: list[Location], seen: set, zone_name: str, doc: Document):
         if not buffer: return
         
         combined = ", ".join(buffer)

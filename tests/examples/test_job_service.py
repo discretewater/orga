@@ -1,10 +1,12 @@
+from unittest.mock import AsyncMock
+
 import pytest
 from fastapi.testclient import TestClient
-from unittest.mock import MagicMock, AsyncMock
-from orga.model import OrganizationProfile
 
 # Import app from job service
 from examples.job_service.main import app, job_store, pipeline
+from orga.model import OrganizationProfile
+
 
 class TestJobService:
     @pytest.fixture

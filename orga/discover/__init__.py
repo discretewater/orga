@@ -1,10 +1,13 @@
-from abc import ABC, abstractmethod
-from typing import List, Set, Dict
-from urllib.parse import urljoin, urlparse
-from selectolax.parser import HTMLParser
 import re
+from abc import ABC, abstractmethod
+from typing import Dict, List, Set
+from urllib.parse import urljoin, urlparse
+
+from selectolax.parser import HTMLParser
+
 from orga.model import Document
 from orga.registry import registry
+
 
 class DiscoveryStrategy(ABC):
     """
@@ -12,7 +15,7 @@ class DiscoveryStrategy(ABC):
     Used to discover more high-value links from an initial document.
     """
     @abstractmethod
-    def discover(self, entry_doc: Document) -> List[str]:
+    def discover(self, entry_doc: Document) -> list[str]:
         pass
 
 class HeuristicDiscoveryStrategy(DiscoveryStrategy):
@@ -35,11 +38,11 @@ class HeuristicDiscoveryStrategy(DiscoveryStrategy):
         "support": 6
     }
 
-    def __init__(self, max_pages: int = 5, keywords: Dict[str, int] = None):
+    def __init__(self, max_pages: int = 5, keywords: dict[str, int] = None):
         self.max_pages = max_pages
         self.keywords = keywords or self.DEFAULT_KEYWORDS
 
-    def discover(self, entry_doc: Document) -> List[str]:
+    def discover(self, entry_doc: Document) -> list[str]:
         if not entry_doc.content:
             return []
 

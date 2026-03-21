@@ -1,27 +1,29 @@
 import pytest
 from pydantic import ValidationError
+
 from orga.model import (
-    OrganizationProfile,
+    Address,
+    Confidence,
+    Contact,
     Document,
     DocumentBundle,
-    Location,
-    Address,
-    Contact,
     Evidence,
+    Location,
+    OrganizationProfile,
     Warning,
     WarningSeverity,
-    Confidence
 )
+
 
 class TestOrganizationProfile:
     """
-    测试 OrganizationProfile 及其子模型的验证逻辑与字段定义。
+    Test validation logic and field definitions of OrganizationProfile and its sub-models.
     """
 
     def test_profile_creation_minimal(self):
         """
-        测试仅使用最小必需字段创建 OrganizationProfile。
-        应确保默认字段（如 list 类型）被正确初始化为空列表。
+        Test creating OrganizationProfile using only minimal required fields.
+        Should ensure default fields (like list types) are correctly initialized as empty lists.
         """
         profile = OrganizationProfile(
             name="Test Org",
@@ -33,11 +35,11 @@ class TestOrganizationProfile:
         assert profile.emails == []
         assert profile.categories == []
         assert profile.warnings == []
-        assert isinstance(profile.confidence, (Confidence, type(None))) # 允许为空或默认对象
+        assert isinstance(profile.confidence, (Confidence, type(None))) # Allow empty or default object
 
     def test_profile_full_fields(self):
         """
-        测试包含所有字段的 OrganizationProfile 创建，验证嵌套模型的正确性。
+        Test OrganizationProfile creation containing all fields, verifying the correctness of nested models.
         """
         profile = OrganizationProfile(
             name="Full Org",
@@ -73,12 +75,12 @@ class TestOrganizationProfile:
 
 class TestDocumentModels:
     """
-    测试 Document 和 DocumentBundle 模型。
+    Test Document and DocumentBundle models.
     """
 
     def test_document_creation(self):
         """
-        测试 Document 对象的创建与基本校验。
+        Test Document object creation and basic validation.
         """
         doc = Document(
             url="https://example.com/about",
@@ -95,14 +97,14 @@ class TestDocumentModels:
 
     def test_document_validation_error(self):
         """
-        测试 Document 缺少必要字段（如 url 或 content）时的校验错误。
+        Test validation error when Document is missing required fields (like url or content).
         """
         with pytest.raises(ValidationError):
-            Document(url="https://no-content.com") # 缺少 content
+            Document(url="https://no-content.com") # Missing content
 
     def test_document_bundle_structure(self):
         """
-        测试 DocumentBundle 的结构，确保它能包含多个 Document 并识别入口页。
+        Test the structure of DocumentBundle, ensuring it can contain multiple Documents and identify the entry page.
         """
         entry_doc = Document(url="https://example.com", content="Index", content_type="text/html", status_code=200)
         contact_doc = Document(url="https://example.com/contact", content="Contact", content_type="text/html", status_code=200)
@@ -115,17 +117,17 @@ class TestDocumentModels:
         
         assert len(bundle.documents) == 2
         assert bundle.entry_url == "https://example.com"
-        # 验证是否可以通过 URL 查找文档（如果模型支持该辅助方法，这里作为预留测试）
+        # Verify if the document can be found by URL (if the model supports this helper method, this is a reserved test here)
         # assert bundle.get_document("https://example.com/contact") == contact_doc
 
 class TestGovernanceModels:
     """
-    测试 Evidence, Warning 等治理模型。
+    Test governance models like Evidence, Warning.
     """
 
     def test_evidence_structure(self):
         """
-        测试 Evidence 模型的字段完整性。
+        Test field integrity of Evidence model.
         """
         ev = Evidence(
             source_url="https://example.com",
@@ -138,12 +140,12 @@ class TestGovernanceModels:
 
     def test_warning_severity(self):
         """
-        测试 Warning 模型及其 Severity 枚举。
+        Test Warning model and its Severity enum.
         """
         warn = Warning(
             code="FETCH_TIMEOUT",
             message="Connection timed out",
-            severity=WarningSeverity.ERROR, # 假设使用了 Enum
+            severity=WarningSeverity.ERROR, # Assuming Enum is used
             related_field="locations"
         )
         assert warn.severity == WarningSeverity.ERROR
@@ -151,12 +153,12 @@ class TestGovernanceModels:
 
 class TestAddressModel:
     """
-    测试 Address 模型及其约束。
+    Test Address model and its constraints.
     """
     
     def test_address_raw_retention(self):
         """
-        测试 Address 模型必须保留 raw 字段，即使其他字段解析失败。
+        Test Address model must retain the raw field, even if other fields fail to parse.
         """
         addr = Address(
             raw="123 Complex Road, Unit 456",
@@ -166,7 +168,7 @@ class TestAddressModel:
         assert addr.raw == "123 Complex Road, Unit 456"
         assert addr.street == "123 Complex Road"
         
-        # 仅有 raw 的情况
+        # Case with only raw
         addr_minimal = Address(raw="Unparseable String")
         assert addr_minimal.raw == "Unparseable String"
         assert addr_minimal.city is None

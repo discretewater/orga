@@ -1,10 +1,10 @@
 import asyncio
-import httpx
 import json
 import sys
 import time
 from datetime import datetime
-from collections import Counter
+
+import httpx
 
 BATCH_FILE = "examples/fixtures/batch_urls.txt"
 OUTPUT_FILE = "service_test_outcome.txt"
@@ -42,11 +42,11 @@ async def run_test():
                     await asyncio.sleep(2)
             
             if not connected:
-                await log(f, f"FATAL: Service connection failed after retries.")
+                await log(f, "FATAL: Service connection failed after retries.")
                 return
 
         # Read URLs
-        with open(BATCH_FILE, "r") as bf:
+        with open(BATCH_FILE) as bf:
             urls = [line.strip() for line in bf if line.strip()]
         await log(f, f"\nLoaded {len(urls)} Validation Targets from {BATCH_FILE}")
 
@@ -95,7 +95,7 @@ async def run_test():
                     await log(f, f"❌ FAILED: {resp.status_code}")
                     await log(f, f"  Error: {resp.text}")
             except Exception as e:
-                await log(f, f"❌ EXCEPTION: {str(e)}")
+                await log(f, f"❌ EXCEPTION: {e!s}")
 
         # 3. Batch Job Processing (Stress Test)
         await log(f, "\n--- Phase 3: Batch Processing Stress Test ---")
@@ -111,7 +111,7 @@ async def run_test():
                     await log(f, f"Submission Failed: {resp.text}")
                     return
             except Exception as e:
-                await log(f, f"Submission Error: {str(e)}")
+                await log(f, f"Submission Error: {e!s}")
                 return
 
             # Poll

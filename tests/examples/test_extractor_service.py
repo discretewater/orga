@@ -1,12 +1,14 @@
+from unittest.mock import AsyncMock
+
 import pytest
 from fastapi.testclient import TestClient
-from unittest.mock import MagicMock, AsyncMock
-from orga.model import OrganizationProfile
 
 # Import app and the global pipeline instance
 # We need to ensure python path allows this.
 # Assuming running with PYTHONPATH=.
 from examples.extractor_service.main import app, pipeline
+from orga.model import OrganizationProfile
+
 
 class TestExtractorService:
     @pytest.fixture

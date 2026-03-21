@@ -1,6 +1,7 @@
 import pytest
-from orga.model import Document, Address
+
 from orga.parse.fields.address_scorer import AddressScorer
+
 
 class TestAddressScoring:
     """

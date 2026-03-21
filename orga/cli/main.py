@@ -1,25 +1,19 @@
-import typer
 import asyncio
 import json
-import yaml
 from pathlib import Path
-from typing import Optional, List
+
+import typer
+import yaml
 from pydantic import ValidationError
 
-from orga.pipeline import OrgaPipeline
-from orga.model import OrgaConfig
-from orga.registry import registry
-
 # Ensure all default strategies are registered
-import orga.fetch.httpx_fetcher
-import orga.discover
-import orga.parse.fields.parsers
-import orga.parse.fields.classifier
-import orga.merge.processor
+from orga.model import OrgaConfig
+from orga.pipeline import OrgaPipeline
+from orga.registry import registry
 
 app = typer.Typer(help="ORGA - Organization Profile Extractor CLI")
 
-def load_config(config_path: Optional[Path]) -> OrgaConfig:
+def load_config(config_path: Path | None) -> OrgaConfig:
     """
     Load OrgaConfig from a YAML or JSON file.
     """
@@ -43,14 +37,14 @@ def load_config(config_path: Optional[Path]) -> OrgaConfig:
         typer.echo(str(e), err=True)
         raise typer.Exit(code=1)
     except Exception as e:
-        typer.secho(f"Error loading config: {str(e)}", fg=typer.colors.RED, err=True)
+        typer.secho(f"Error loading config: {e!s}", fg=typer.colors.RED, err=True)
         raise typer.Exit(code=1)
 
 @app.command()
 def parse(
     url: str = typer.Argument(..., help="The URL to parse"),
-    config: Optional[Path] = typer.Option(None, "--config", "-c", help="Path to configuration file (YAML/JSON)"),
-    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Path to save the output JSON"),
+    config: Path | None = typer.Option(None, "--config", "-c", help="Path to configuration file (YAML/JSON)"),
+    output: Path | None = typer.Option(None, "--output", "-o", help="Path to save the output JSON"),
     pretty: bool = typer.Option(True, help="Pretty print JSON output"),
     debug: bool = typer.Option(False, "--debug", "-d", help="Enable debug output (internal evidence, filtered links)")
 ):
@@ -110,8 +104,8 @@ def parse(
 @app.command()
 def parse_batch(
     input_file: Path = typer.Argument(..., help="Text file containing URLs (one per line)"),
-    config: Optional[Path] = typer.Option(None, "--config", "-c", help="Path to configuration file"),
-    output: Optional[Path] = typer.Option(None, "--output", "-o", help="Path to save the output JSONL file"),
+    config: Path | None = typer.Option(None, "--config", "-c", help="Path to configuration file"),
+    output: Path | None = typer.Option(None, "--output", "-o", help="Path to save the output JSONL file"),
     pretty: bool = typer.Option(False, "--pretty", help="Pretty print JSON output (best for stdout debugging)"),
     debug: bool = typer.Option(False, "--debug", "-d", help="Enable debug output in JSONL")
 ):
@@ -155,7 +149,7 @@ def parse_batch(
                 results.append(json_str)
                     
             except Exception as e:
-                typer.secho(f"Failed to process {url}: {str(e)}", fg=typer.colors.YELLOW, err=True)
+                typer.secho(f"Failed to process {url}: {e!s}", fg=typer.colors.YELLOW, err=True)
         return results
 
     json_lines = asyncio.run(_run_batch())

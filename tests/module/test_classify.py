@@ -1,8 +1,11 @@
 import pytest
-from orga.model import Document, OrgaConfig
-from orga.registry import registry
+
+from orga.model import Document
+
 # We'll define these new classes/interfaces shortly
 from orga.parse.fields import CategoryClassifierStrategy, WeightedHeuristicClassifier
+from orga.registry import registry
+
 
 class TestClassificationArchitecture:
     """

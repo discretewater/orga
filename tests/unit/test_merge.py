@@ -1,9 +1,17 @@
 import pytest
-from orga.model import (
-    OrganizationProfile, Location, Address, Contact, 
-    ContactKind, Evidence, Warning, WarningSeverity
-)
+
 from orga.merge.processor import ProfilePostProcessor
+from orga.model import (
+    Address,
+    Contact,
+    ContactKind,
+    Evidence,
+    Location,
+    OrganizationProfile,
+    Warning,
+    WarningSeverity,
+)
+
 
 class TestProfilePostProcessor:
     """

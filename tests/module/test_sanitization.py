@@ -1,7 +1,9 @@
 import pytest
-from orga.model import Document, OrganizationProfile, Warning
-from orga.pipeline import OrgaPipeline
+
+from orga.model import Document, OrganizationProfile
 from orga.model.config import OrgaConfig
+from orga.pipeline import OrgaPipeline
+
 
 class TestInputQualityGate:
     """
@@ -107,8 +109,8 @@ class TestPhoneHardening:
     """
     
     def test_reject_doi_and_versions(self):
-        from orga.parse.fields.parsers import ContactParser
         from orga.model import ContactKind
+        from orga.parse.fields.parsers import ContactParser
         
         content = """
         <p>DOI: 10.1002/0471140864</p>
@@ -132,7 +134,7 @@ class TestSocialHardening:
     
     def test_reject_non_profile_paths(self):
         from orga.merge.processor import ProfilePostProcessor
-        from orga.model import OrganizationProfile, Contact, ContactKind, Evidence
+        from orga.model import Contact, ContactKind, Evidence
         
         processor = ProfilePostProcessor()
         profile = OrganizationProfile(

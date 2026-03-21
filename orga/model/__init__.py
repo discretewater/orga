@@ -1,11 +1,11 @@
-from .types import WarningSeverity, SourceKind, ContactKind
+from .config import OrgaConfig
 from .document import Document, DocumentBundle, Warning
 from .profile import (
-    OrganizationProfile,
-    Location,
     Address,
+    Confidence,
     Contact,
     Evidence,
-    Confidence
+    Location,
+    OrganizationProfile,
 )
-from .config import OrgaConfig
+from .types import ContactKind, SourceKind, WarningSeverity

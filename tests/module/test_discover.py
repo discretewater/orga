@@ -1,15 +1,15 @@
-import pytest
 from orga.discover import HeuristicDiscoveryStrategy
 from orga.model import Document
 
+
 class TestHeuristicDiscoveryStrategy:
     """
-    测试启发式页面发现策略。
+    Test heuristic page discovery strategy.
     """
 
     def test_discover_basic_links(self):
         """
-        测试从 HTML 内容中发现基本的“联系我们”和“关于我们”链接。
+        Test discovering basic "Contact Us" and "About Us" links from HTML content.
         """
         content = """
         <html>
@@ -25,15 +25,15 @@ class TestHeuristicDiscoveryStrategy:
         
         links = strategy.discover(doc)
         
-        # 应包含站内链接
+        # Should include internal links
         assert "https://example.com/about-us" in links
         assert "https://example.com/contact" in links
-        # 不应包含站外链接
+        # Should not include external links
         assert "https://other.com/external" not in links
 
     def test_discover_max_pages_limit(self):
         """
-        测试发现的页面数量限制。
+        Test the limit on the number of discovered pages.
         """
         content = """
         <html>
@@ -46,7 +46,7 @@ class TestHeuristicDiscoveryStrategy:
         </html>
         """
         doc = Document(url="https://example.com", content=content, status_code=200)
-        # 设置最大页面数为 2
+        # Set max pages to 2
         strategy = HeuristicDiscoveryStrategy(max_pages=2)
         
         links = strategy.discover(doc)
@@ -54,7 +54,7 @@ class TestHeuristicDiscoveryStrategy:
 
     def test_discover_domain_restriction(self):
         """
-        测试域名限制，确保只发现同一站点的链接。
+        Test domain restriction to ensure only links from the same site are discovered.
         """
         content = """
         <html>
@@ -69,12 +69,12 @@ class TestHeuristicDiscoveryStrategy:
         
         links = strategy.discover(doc)
         assert "https://example.com/local" in links
-        # 默认情况下，子域名通常视为不同站点，除非另有配置
+        # By default, subdomains are usually considered different sites unless configured otherwise
         assert "https://sub.example.com/page" not in links
 
     def test_discover_priority_keywords(self):
         """
-        测试关键词优先级，应优先发现更有价值的页面（如 contact）。
+        Test keyword priority, more valuable pages (like contact) should be discovered first.
         """
         content = """
         <html>
@@ -86,16 +86,16 @@ class TestHeuristicDiscoveryStrategy:
         </html>
         """
         doc = Document(url="https://example.com", content=content, status_code=200)
-        # 限制只取 1 个页面
+        # Limit to only 1 page
         strategy = HeuristicDiscoveryStrategy(max_pages=1)
         
         links = strategy.discover(doc)
-        # 理想情况下，contact 应该比 random 更有可能被选中
+        # Ideally, contact should be more likely to be selected than random
         assert "https://example.com/contact-us" in links
 
     def test_discover_deduplication(self):
         """
-        测试重复链接去重。
+        Test duplicate link deduplication.
         """
         content = """
         <html>

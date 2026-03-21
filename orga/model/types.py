@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class WarningSeverity(str, Enum):
     INFO = "info"
     WARNING = "warning"
