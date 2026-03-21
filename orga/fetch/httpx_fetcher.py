@@ -24,25 +24,14 @@ class HttpxFetcher:
     Implements retries, timeout control, concurrency limits, and rate limiting.
     """
     
-    # Static pool of semaphores and limiters to share across fetcher instances 
-    # if using the same configuration.
-    _semaphores: dict[int, asyncio.Semaphore] = {}
-    _limiters: dict[int, AsyncLimiter] = {}
-
     def __init__(self, config: OrgaConfig):
         self.config = config.fetch
         
-        # Initialize global concurrency control
-        # We use the config hash or id to share resources among identical configs
-        config_id = id(self.config)
-        if config_id not in self._semaphores:
-            self._semaphores[config_id] = asyncio.Semaphore(self.config.concurrency)
-            # Default rate limit: concurrency * 2 requests per second if not specified
-            # For now, let's use a conservative 5 req/s as default
-            self._limiters[config_id] = AsyncLimiter(10, 1) # 10 requests per second
-
-        self._semaphore = self._semaphores[config_id]
-        self._limiter = self._limiters[config_id]
+        # Initialize concurrency control per fetcher instance
+        # We avoid static caching based on id(config) to prevent test flakiness due to memory address reuse
+        self._semaphore = asyncio.Semaphore(self.config.concurrency)
+        # Default rate limit: 10 requests per second (conservative default)
+        self._limiter = AsyncLimiter(10, 1)
 
     async def fetch(self, url: str) -> Document:
         """
