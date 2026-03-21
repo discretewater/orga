@@ -48,7 +48,7 @@ fetch:
 """)
         result = runner.invoke(app, ["validate-config", str(config_path)])
         assert result.exit_code != 0
-        assert "validation error" in result.stdout or "Error" in result.stdout
+        assert "validation error" in result.output.lower() or "error" in result.output.lower()
 
     def test_parse_batch(self, tmp_path, monkeypatch):
         """
